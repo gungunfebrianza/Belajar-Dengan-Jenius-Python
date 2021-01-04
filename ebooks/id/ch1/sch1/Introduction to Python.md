@@ -29,6 +29,14 @@ Dalam proposal tersebut tujuan ***python*** diciptakan dijelaskan sebagai beriku
 3. Kode pemrograman yang mudah difahami seperti bahasa Inggris.
 4. Cocok untuk pekerjaan sehari-hari & pengembangan aplikasi yg cepat
 
+Kini pada tahun 2021 ***python*** berhasil menjadi bahasa pemrograman yang paling populer di dunia, menduduki urutan nomor 1. Bahasa pemrograman yang kini populer digunakan untuk edukasi dan ***scientific computing***. 
+
+Bahasa pemrograman ***python*** juga berhasil melewati kepopuleran bahasa pemrograman R sebagai bahasa pemrograman yang populer untuk ***Data Science***. Kesuksesan ini dikarenakan python adalah bahasa pemrograman yang memiliki karakteristik sebagai berikut :
+
+1. Bahasa pemrograman yang mudah difahami awam dan ***professional developer***, ***less time and less code***, lebih mudah dari bahasa pemrograman ***C***, ***C++***, ***C#*** , ***Java***, ***Golang*** dan ***Rust***.
+2. Tersedia ***Standard Libraries*** dan ***Third-party Open Source Libraries*** yang membantu ***pythonian*** produktif dalam mengembangkan aplikasi dengan cepat.
+3. Terdapat ***Web Framework*** populer dalam ***python*** seperti ***Django*** dan ***Flask***.
+
 --------------
 
 
