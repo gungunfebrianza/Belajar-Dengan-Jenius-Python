@@ -41,6 +41,10 @@
    - Security Management
    - Operating System Classification
 6. Programming Language
+   - Programming Language History
+   - The First Generation (1490s)
+   - The Second Generation (1950s)
+   - The Third Generation (1955-1965)
 7. Programming Language Abstraction
    - Machine Language
    - Assembly Language
