@@ -36,6 +36,8 @@ Bahasa pemrograman ***python*** juga berhasil melewati kepopuleran bahasa pemrog
 1. Bahasa pemrograman yang mudah difahami awam dan ***professional developer***, ***less time and less code***, lebih mudah dari bahasa pemrograman ***C***, ***C++***, ***C#*** , ***Java***, ***Golang*** dan ***Rust***.
 2. Tersedia ***Standard Libraries*** dan ***Third-party Open Source Libraries*** yang membantu ***pythonian*** produktif dalam mengembangkan aplikasi dengan cepat.
 3. Terdapat ***Web Framework*** populer dalam ***python*** seperti ***Django*** dan ***Flask***.
+4. Mendukung Berbagai Paradigma Pemrograman seperti ***Procedural***, ***Functional***, dan ***Object-Oriented***.
+5. Menyederhanakan Concurrent Programming menggunakan ***ayncio*** dan ***aync/await***, kita dapat menulis ***single-threaded concurrent code*** dan kemudahan untuk menulisnya, ***debugging*** dan ***maintenance single-threaded concurrent code***. 
 
 --------------
 
