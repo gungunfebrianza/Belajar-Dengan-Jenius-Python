@@ -52,6 +52,8 @@
    - Compiled Language
    - Interpreted Language
    - Hybrid Language
+8. Programming Paradigm
+   - Imperative & Declarative Programming
 
 #### Subchapter 2 – Kompiler & Interpreter
 
