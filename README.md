@@ -46,11 +46,12 @@
    - [Application Management](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Operating%20System.md#application-management)
    - [Security Management](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Operating%20System.md#security-management)
    - [Operating System Classification](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Operating%20System.md#operating-system-classification)
-6. Programming Language
-   - Programming Language History
-   - The First Generation (1490s)
-   - The Second Generation (1950s)
-   - The Third Generation (1955-1965)
+6. [Programming Language](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Programming%20Language.md)
+   - [Programming Language History](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Programming%20Language.md#programming-language-history)
+   - [The First Generation (1940s)](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Programming%20Language.md#the-first-generation-1940s)
+   - [The Second Generation (1950s)](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Programming%20Language.md#the-second-generation-1950s)
+   - [The Third Generation (1955-1965)](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Programming%20Language.md#the-third-generation-1955-1965)
+   - [The Fourth Generation (1980)](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Programming%20Language.md#the-fourth-generation-1980)
 7. Programming Language Abstraction
    - Machine Language
    - Assembly Language
