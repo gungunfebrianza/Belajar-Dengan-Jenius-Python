@@ -107,10 +107,12 @@
 11. Display Multiple File
 12. Font Ligature
 
-#### Subchapter 2 – Python Language
+#### Subchapter 2 – Python Workbench
 
-1. Go Lang Installation
-2. Check Golang Version
+1. Anaconda Installation
+2. Anaconda Navigator
+3. Anaconda Install Packages
+4. Update Anaconda
 
 ### Chapter 3 - Mastering Python
 

@@ -4,7 +4,7 @@
 
 # *Subchapter* 2 – Python Workbench
 
-**Subchapter** 1 – **Objectives**
+**Subchapter** 2 – **Objectives**
 
 \-    Mempelajari Cara Install Anaconda
 
@@ -14,5 +14,9 @@
 
 \-    Memahami Cara Update Anaconda
 
---------------------------------
+--------------
+
+
+
+------------
 
