@@ -50,9 +50,9 @@ Setiap **pages** yang digunakan oleh program bersifat **contiguos**, dapat berur
 
 
 
-### *Field*
+### Input or Output (I/O) Management 
 
-<img src="../../../assets/DataHierarchy.png" style="zoom: 50%;" />
+Perangkat **input** dan **output** disebut dengan **peripherals**, sekumpulan perangkat keras yang terhubung pada sistem komputer. Sistem operasi dapat berinteraksi dengan **peripherals** dengan memanggil sekumpulan program yang ada di dalam **device driver**.
 
 ### *Record*
 
