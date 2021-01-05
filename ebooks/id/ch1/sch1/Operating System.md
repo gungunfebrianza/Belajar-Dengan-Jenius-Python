@@ -58,11 +58,15 @@ Perangkat **input** dan **output** disebut dengan **peripherals**, sekumpulan pe
 
 Sistem operasi memiliki sebuah **Application Programming Interface** (API) yang dapat diprogram dan digunakan oleh suatu aplikasi dan **hardware** untuk berinteraksi dengan sistem operasi itu sendiri. 
 
-### *Files*
+### *S*ecurity Management
 
-Secara umum sebuah *file* dapat berupa ***arbitrary data\*** dengan ***arbitrary format\***. Sebagai contoh dengan ***notepad.exe\*** kita dapat membuat sebuah tulisan berisi ***plaintext\*** kemudian menyimpanya ke berbagai format seperti, **.txt, .md, .html** atau bahkan menyimpanya dengan format yang tidak dikenali oleh program dalam suatu sistem operasi (misal dengan format .**xxxasdqwe**).
+Sistem operasi memiliki manajemen sistem keamanan dasar seperti :
 
-Di beberapa sistem operasi sebuah *file* dikatakan dengan serangkaian *bytes* yang membentuk suatu *file*.
+1. Manajemen **user**.
+
+2. Manajemen akses level untuk setiap **user**.
+
+3. **Auditing logs** untuk setiap **file** yang dibuat, diakses, diubah dan dihapus oleh setiap **user**.
 
 ### *Database*
 
