@@ -16,23 +16,29 @@
 
 1. [Computer Program](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Computer%20Program.md)
 2. [Computation](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Computation.md)
-3. Computer Organization
-   - Input Unit
-   - Output Unit
-   - Memory Unit
-   - Arithmetic and Logic Unit (ALU)
-   - Central Processing Unit (CPU)
-   - Secondary Storage Unit
+3. [Computer Organization](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Computer%20Organization.md)
+   - [Input Unit](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Computer%20Organization.md#input-unit)
+   - [Output Unit](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Computer%20Organization.md#output-unit)
+   - [Memory Unit](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Computer%20Organization.md#memory-unit)
+   - [Central Processing Unit (CPU)](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Computer%20Organization.md#central-processing-unit-cpu)
+     - [Processor](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Computer%20Organization.md#processor)
+     - [Arithmetic and Logic Unit (ALU)](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Computer%20Organization.md#arithmetic-and-logic-unit-alu)
+     - [Von Neumann Architecture](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Computer%20Organization.md#von-neumann-architecture)
+     - [CPU Register](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Computer%20Organization.md#cpu-register)
+     - [Instruction Set Architecture (ISA)](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Computer%20Organization.md#instruction-set-architecture-isa)
+     - [Multi-core Processor](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Computer%20Organization.md#multi-core-processor)
+   - [Secondary Storage Unit](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Computer%20Organization.md#secondary-storage-unit)
 4. [Data Hierarchy](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Data%20Hierarchy.md)
-   - Bit
-   - Byte
-   - Bytes
-   - Character
-   - Field
-   - Record
-   - Files
-   - Database
-   - Big Data
+   - [Bit](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Data%20Hierarchy.md#bit)
+   - [Byte](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Data%20Hierarchy.md#byte)
+   - [Bytes](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Data%20Hierarchy.md#bytes)
+   - [Character](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Data%20Hierarchy.md#character)
+   - [ASCII](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Data%20Hierarchy.md#ascii)
+   - [Field](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Data%20Hierarchy.md#field)
+   - [Record](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Data%20Hierarchy.md#record)
+   - [Files](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Data%20Hierarchy.md#files)
+   - [Database](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Data%20Hierarchy.md#database)
+   - [Big Data](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Data%20Hierarchy.md#big-data)
 5. Operating System
    - Processor Management
    - Memory Management
