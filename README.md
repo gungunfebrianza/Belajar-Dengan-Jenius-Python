@@ -39,13 +39,13 @@
    - [Files](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Data%20Hierarchy.md#files)
    - [Database](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Data%20Hierarchy.md#database)
    - [Big Data](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Data%20Hierarchy.md#big-data)
-5. Operating System
-   - Processor Management
-   - Memory Management
-   - Input or Output (I/O) Management
-   - Application Management
-   - Security Management
-   - Operating System Classification
+5. [Operating System](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Operating%20System.md)
+   - [Processor Management](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Operating%20System.md#processor-management)
+   - [Memory Management](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Operating%20System.md#memory-management)
+   - [Input or Output (I/O) Management](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Operating%20System.md#input-or-output-io-management)
+   - [Application Management](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Operating%20System.md#application-management)
+   - [Security Management](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Operating%20System.md#security-management)
+   - [Operating System Classification](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Operating%20System.md#operating-system-classification)
 6. Programming Language
    - Programming Language History
    - The First Generation (1490s)
