@@ -22,11 +22,11 @@ Bahasa pemrograman di desain **human-readable** untuk mempermudah kita dalam mem
 
 2. Menggunakan **Compiler**
 
-## Programming Language History
+#### Programming Language History
 
 Di bawah ini adalah diagram sejarah perkembangan bahasa pemrograman :
 
-<img src="../../../assetsProgrammingLanguageHistory.png" style="zoom:80%;" />
+<img src="../../../assets/ProgrammingLanguageHistory.png" style="zoom:80%;" />
 
 Terdapat 5 generasi bahasa pemrograman, semakin maju generasi semakin tinggi **abstraction** bahasa pemrogramannya :
 
@@ -39,6 +39,14 @@ Terdapat 5 generasi bahasa pemrograman, semakin maju generasi semakin tinggi **a
 **4.**  **Non-procedural Language**
 
 **5.**  **Natural Language**
+
+#### The First Generation (1940s)
+
+#### The Second Generation (1950s)
+
+#### The Third Generation (1955-1965)
+
+#### The Fourth Generation (1980)
 
 ---------------------
 
