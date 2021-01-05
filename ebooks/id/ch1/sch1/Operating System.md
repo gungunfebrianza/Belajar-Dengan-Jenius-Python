@@ -30,58 +30,25 @@ Pada sistem operasi kita dapat melakukan **multitasking** yaitu mengeksekusi leb
 
 2. Sistem komputer memiliki cukup memori untuk menyimpan data pada **primary memory** (**RAM**)
 
-### *Byte*
+### Memory Management
 
-*Byte* adalah kependekan dari **Binary Term**, sebuah unit penyimpanan yang sudah memiliki kapabilitas paling sederhana untuk menyimpan sebuah karakter tunggal. 
+**Management Memory** dilakukan untuk memastikan sekumpulan program dapat berjalan dalam satu waktu. Salah satu metode **memory management** disebut dengan **paging**. Sebuah **memory** dapat direcah menjadi sekumpulan block dengan ukuran **fixed** yang disebut dengan **page**.
 
-1 *byte* = sekumpulan *bit* (terdapat delapan bit). Contoh : 0 1 0 1 1 0 1 0
+Pada **Modern Operating System** ukuran dari **memory pages** sebesar 4 **kilobytes** (KB). Ketika suatu program berjalan, maka **memory** yang dibutuhkan untuk menjalankan program tersebut akan dibuat.
 
-1 *byte* dapat menyimpan karakter contoh : 'A' atau 'x' atau '$'
+Sistem operasi akan menentukan alokasi jumlah **pages** yang dibutuhkan untuk menjalankan program tersebut. Ketika suatu program telah selesai digunakan maka alokasi **pages** akan dibebaskan kembali agar dapat digunakan oleh program lainnya.
 
-### *Bytes*
+<img src="../../../assets/Pages1.png" style="zoom:85%;" />
 
-*Byte* adalah unit yang dipat digunakan untuk menyimpan informasi, seluruh penyimpanan diukur menggunakan *bytes*.
+Pada ilustrasi **page** di atas program A membutuhkan 2 **page** yaitu **page** 0 dan 1 dan program B membutuhkan 3 **page** yaitu **page** 2, **page** 3 dan **page** 4. 
 
-| **Number of Bytes**  | **Unit**         | **Representation**      |
-| -------------------- | ---------------- | ----------------------- |
-| 1                    | *Byte*           | *One Character*         |
-| 1024                 | *KiloByte (Kb)*  | *Small Text In notepad* |
-| 1,048,576            | *MegaByte (Mb)*  | *Ebook*                 |
-| 1,073,741,824        | *GigaByte (Gb)*  | *Movie*                 |
-| 1,099,511,627,776    | *TeraByte (Tb)*  | *Archive*               |
-| *Approximately* 1015 | *PetaByte (Pb)*  | *Big Data*              |
-| *Approximately* 1018 | *ExaByte (Eb)*   | *Big Data*              |
-| *Approximately* 1021 | *ZettaByte (Zb)* | *Big Data*              |
+Jika program A selesai dan kita mengeksekusi program C yang membutuhkan 3 ****page**** saat program B masih berjalan, maka **page** 0, **page**  1 dan **page** 6 akan digunakan oleh program C seperti pada gambar di bawah ini :
 
-### *Character*
+<img src="../../../assets/Pages2.png" style="zoom:85%;" />
 
-Data dalam bentuk *bits* tidak mudah untuk dikelola sehingga perlu bentuk lain yang dapat digunakan manusia dan mempermudah proses pengelolaan informasi. Untuk mewujudkan hal tersebut data dalam *bits* harus bisa direpresentasikan dalam bentuk *character*. Seperti *decimal* *digit* (0-9), *letter* (A-Z dan a-z), dan *special symbol* (!@#$%^&*()-=_+). *Digit, letter* dan *symbol* disebut dengan *characters*. 
+Setiap **pages** yang digunakan oleh program bersifat **contiguos**, dapat berurutan atau acak. Sistem operasi akan menentukan **page** mana yang akan digunakan dan membaca kembali data ketika dibutuhkan.
 
-**Characters Set** adalah sekumpulan *characters* yang digunakan untuk menulis program dan merepresentasikan sebuah informasi. Dikarenakan komputer memproses informasi dalam bentuk 1 dan 0, maka sebuah *character* dapat direpresentasikan menggunakan 1 dan 0.
 
-*Character* adalah unit terkecil dalam sistem teks dan memiliki makna. 
-
-Sekumpulan *character* dapat membentuk *string* yang selanjutnya dapat digunakan untuk memvisualisasikan suatu bahasa verbal secara digital. Contoh *character* adalah abjad, angka dan simbol lainya. 
-
-<img src="../../../assets/Grapheme.png" style="zoom:75%;" />
-
-#### *ASCII*
-
-Komputer merepresentasikan sebuah data dengan *number*, di awal pengembangan komputer tepatnya sekitar tahun 1940. Penggunaan teks dalam komputer untuk disimpan dan dimanipulasi dapat dilakukan, dengan cara merepresentasikan abjad dalam alfabet menggunakan *number*. Sebagai contoh angka 65 merepresentasikan huruf A dan angka 66 merepresentasikan huruf B hingga seterusnya.
-
-Pada tahun 1950 saat komputer sudah semakin banyak digunakan untuk berkomunikasi, standar untuk merepresentasikan *text* agar dapat difahami oleh berbagai model dan *brand* komputer diusung. 
-
-*ASCII* (*American Standard Code for Information Interchange*) adalah karya yang diusung, pertama dipublikasikan pada tahun 1963. Saat pertama kali dipublikasikan *ASCII* masih digunakan untuk *teleprinter technology*. *ASCII* terus direvisi hingga akhirnya *7-bit ASCII Table* diadopsi oleh *American National Standards Institute* (*ANSI*).
-
-Dengan *7-bit* maka terdapat 128 *unique binary pattern* yang dapat digunakan untuk merepresentasikan suatu karakter. Kita dapat merepresentasikan **alphanumeric** (abjad a-z, A-Z, angka 0-9, dan *special character* seperti “!@#$%^&*”). 
-
-Pada gambar di bawah ini huruf kapital G memiliki representasi dalam bentuk biner 100 0111 (7 *binary digit*) dan huruf kapital F memiliki representasi dalam bentuk *binary pattern* 100 0110 : 
-
-![](../../../assets/ASCIICode.png)
-
-Pada huruf kapital G angka 107 adalah representasi dalam *octal numeral system*, angka 71 adalah representasi dalam *decimal numeral system* dan angka 46 adalah representasi dalam *hexadecimal*. Representasi tidak hanya dalam bentuk *binary*. Untuk *table ASCII* lebih lengkapnya anda dapat melihat di wikipedia.
-
-*Character* hanya merepresentasikan sekumpulan *bit*, *field* merepresentasikan serangkaian *character* atau *bytes* yang memiliki makna lebih luas. Misal sebuah *field* dapat digunakan untuk merepresentasikan nama seseorang atau umur seseorang.
 
 ### *Field*
 
