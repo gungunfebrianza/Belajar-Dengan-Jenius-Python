@@ -1,4 +1,4 @@
-# Belajar Dengan Jenius Golang
+# Belajar Dengan Jenius Python
 
 ## Penulis : Gun Gun Febrianza
 
@@ -14,7 +14,7 @@ Terdiri dari sekumpulan **input device** untuk memproduksi informasi yaitu *keyb
 
 Terdiri dari sekumpulan **output device** untuk menampilkan informasi yaitu *screen monitor, speaker, printer* hingga ke *oculus rift*. 
 
-<img src="../../../assets/AnacondaNavigator.png" style="zoom:80%;" />
+<img src="../../../assets/OculustRift.png" style="zoom:80%;" />
 
 ### *Memory Unit*
 
