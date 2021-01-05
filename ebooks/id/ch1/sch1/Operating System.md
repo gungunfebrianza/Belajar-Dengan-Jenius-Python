@@ -2,7 +2,7 @@
 
 ## Penulis : Gun Gun Febrianza
 
-## *Data Hierarchy*
+## *Operating System*
 
 Sistem operasi adalah sekumpulan program yang mengendalikan perangkat keras komputer dan sumber perangkat lunak yang ada di dalamnya. 
 
