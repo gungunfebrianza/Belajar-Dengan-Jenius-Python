@@ -107,12 +107,12 @@
 11. Display Multiple File
 12. Font Ligature
 
-#### Subchapter 2 – Python Workbench
+#### Subchapter 2 – [Python Workbench](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch2/sch2/Python%20Workbench.md)
 
-1. Anaconda Installation
-2. Anaconda Navigator
-3. Anaconda Install Packages
-4. Update Anaconda
+1. [Anaconda Installation](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch2/sch2/Anaconda%20Installation.md)
+2. [Anaconda Navigator](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch2/sch2/Anaconda%20Navigator.md)
+3. [Anaconda Install Packages](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch2/sch2/Anaconda%20Install%20Package.md)
+4. [Update Anaconda](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch2/sch2/Update%20Anaconda.md)
 
 ### Chapter 3 - Mastering Python
 
