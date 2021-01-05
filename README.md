@@ -12,10 +12,10 @@
 
 ### Chapter 1 - Computer
 
-#### Subchapter 1 – Komputer & Pemograman
+#### Subchapter 1 – [Komputer & Pemograman](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Komputer%20%26%20Pemograman.md)
 
-1. Computer Program
-2. Computation
+1. [Computer Program](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Computer%20Program.md)
+2. [Computation](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Computation.md)
 3. Computer Organization
    - Input Unit
    - Output Unit
@@ -23,7 +23,7 @@
    - Arithmetic and Logic Unit (ALU)
    - Central Processing Unit (CPU)
    - Secondary Storage Unit
-4. Data Hierarchy
+4. [Data Hierarchy](https://github.com/gungunfebrianza/Belajar-Dengan-Jenius-Python/blob/main/ebooks/id/ch1/sch1/Data%20Hierarchy.md)
    - Bit
    - Byte
    - Bytes
