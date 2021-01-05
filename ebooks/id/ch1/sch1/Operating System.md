@@ -54,9 +54,9 @@ Setiap **pages** yang digunakan oleh program bersifat **contiguos**, dapat berur
 
 Perangkat **input** dan **output** disebut dengan **peripherals**, sekumpulan perangkat keras yang terhubung pada sistem komputer. Sistem operasi dapat berinteraksi dengan **peripherals** dengan memanggil sekumpulan program yang ada di dalam **device driver**.
 
-### *Record*
+### *A*pplication Management
 
-Beberapa *field* yang saling berhubungan atau memiliki kesamaan dapat digunakan untuk membangun suatu *record*. Misalkan dalam sistem kependudukan, anda tentu memiliki beberapa *fields* diantaranya adalah nama, tempat & tanggal lahir, jenis kelamin, status dan sebagainya. Ketika masing-masing *field* terisi maka kita akan membentuk suatu *record*.
+Sistem operasi memiliki sebuah **Application Programming Interface** (API) yang dapat diprogram dan digunakan oleh suatu aplikasi dan **hardware** untuk berinteraksi dengan sistem operasi itu sendiri. 
 
 ### *Files*
 
