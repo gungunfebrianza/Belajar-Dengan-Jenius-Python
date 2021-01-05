@@ -1,16 +1,34 @@
-# Belajar Dengan Jenius Golang
+# Belajar Dengan Jenius Python
 
 ## Penulis : Gun Gun Febrianza
 
 ## *Data Hierarchy*
 
-Data yang akan diproses oleh komputer memiliki bentuk data hirarki, mulai dari yang paling kecil dan tidak dapat dibagi yaitu bits sampai ke dalam bentuk yang lebih kompleks
+Sistem operasi adalah sekumpulan program yang mengendalikan perangkat keras komputer dan sumber perangkat lunak yang ada di dalamnya. 
 
-### *Bit*
+<img src="../../../assets/OperatingSystem.png" style="zoom:55%;" />
 
-Bit adalah kependekan dari **Binary Digit**, unit terkecil sebuah informasi dalam mesin komputer. Satu buah *bit* dapat menampung dua nilai diantaranya adalah **0** atau **1**. 
+Setiap sistem operasi juga menyediakan **interface** :
 
-Jika terdapat 8 *bit* maka kita dapat menyebutnya sebagai **1 byte**.
+1. **Graphical User Interface** (**GUI**)
+
+2. **Command-line Interface** (**CLI**)
+
+3. **Mobile User Interface (Mobile UI)**
+
+<img src="../../../assets/UserInterface.png" style="zoom:55%;" />
+
+
+
+### Processor Management
+
+Pada sistem operasi kita dapat melakukan **multitasking** yaitu mengeksekusi lebih dari satu program sekaligus (simultan). Sebagai contoh kita dapat membuka program untuk mengelola dokumen, melakukan **streaming** musik dan program lainnya.
+
+**Multitasking** dapat dilakukan pada :
+
+1. Modern **Operating System**
+
+2. Sistem komputer memiliki cukup memori untuk menyimpan data pada **primary memory** (**RAM**)
 
 ### *Byte*
 
