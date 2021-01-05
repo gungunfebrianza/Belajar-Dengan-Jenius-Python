@@ -2,9 +2,9 @@
 
 ## Penulis : Gun Gun Febrianza
 
-# *Subchapter* 3 – Introduction to Python
+# *Subchapter* 1 – Introduction to Python
 
-**Subchapter** 3 – **Objectives**
+**Subchapter** 1 – **Objectives**
 
 \-    Mengenal 
 
