@@ -68,19 +68,13 @@ Sistem operasi memiliki manajemen sistem keamanan dasar seperti :
 
 3. **Auditing logs** untuk setiap **file** yang dibuat, diakses, diubah dan dihapus oleh setiap **user**.
 
-### *Database*
+### Operating System Classification
 
-*Database* adalah sekumpulan data yang teroganisir dengan baik agar bisa diakses dan dimanipulasi. Model pembuatan *database* yang paling terkenal adalah *relational database*, data disimpan ke dalam sebuah *table* yang berisi *record* dan *fields*.
+Terdapat banyak sekali sistem operasi yang ada hari ini mulai dari sistem operasi *Unix*, *Windows*, *Linux*, OS X dan sebagainya. 
 
-### *Big Data*
+Masing masing sistem operasi memiliki kelebihan dan kekurangan. Saat ini sistem operasi telah didominasi oleh 32 Bit dan 64 Bit *Operating System*. 
 
-***Big Data\*** adalah terminologi yang menjelaskan sebuah fenomena data dengan *volume* yang sangat besar (*High Volume Data*), data dengan struktur yang bervariasi (*High Varied Data*) dan data diproduksi dengan kecepatan yang sangat tinggi (*High Velocity Data*). 
+Pada sistem operasi 32 bit penggunaan kapasitas RAM dibatasi sampai 4096 MB RAM, 2^32 = 4,294,967,296 *bytes* untuk setiap *process*. Pada sistem operasi 64 bit penggunaan kapasitas RAM dibatasi sampai 16 Exabytes 2^64 = 18,446,744,073,709,551,616 *bytes*. 
 
-Ketersediaan internet, kecepatan internet, *web application* dan produksi perangkat elektronik seperti *smartphone*, komputer, laptop dan *tablet* menciptakan ledakan data dengan pertumbuhan yang sangat cepat.
-
-<img src="F:\Marketkoin 2.0\The Alexandria\Drafts Mastering Golang\Belajar-Dengan-Jenius-Golang\ebooks\assets\FacebookActiveUser.png" style="zoom:75%;" />
-
-Dengan 2,4 milyar pengguna aktif pada kuarter kedua tahun 2019 *facebook* menjadi *platform* jejaring sosial (*social media*) terbesar didunia. Sebuah *platform social media*, dapat memproduksi berbagai jenis data seperti gambar (*image*), vidio (*video*), teks (*text*) dan suara (*voice*) dengan kecepatan yang sangat tinggi.
-
-------------------------
+-------
 
