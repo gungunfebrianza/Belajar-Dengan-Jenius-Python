@@ -14,6 +14,10 @@ print(len(maudy))  # 139
 # String Are Array
 print(maudy[137])  # u
 
+# Check String
+print("manusia" in maudy)  # True
+print("maudy ayunda" not in maudy)  # True
+
 # String Looping
 for maudy in "dunia":
     print(maudy)
