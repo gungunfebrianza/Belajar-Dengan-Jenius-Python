@@ -1,0 +1,19 @@
+maudy = """Lirik Perahu Kertas
+'Ku bahagia kau telah terlahir di dunia
+Dan kau ada di antara miliaran manusia
+Dan 'ku bisa dengan radarku menemukanmu
+"""
+print(maudy)
+
+# String Are Array
+print(maudy[0])  # L
+
+# String Length
+print(len(maudy))  # 139
+
+# String Are Array
+print(maudy[137])  # u
+
+# String Looping
+for maudy in "dunia":
+    print(maudy)
