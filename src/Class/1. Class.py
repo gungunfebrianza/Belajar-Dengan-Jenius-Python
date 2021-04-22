@@ -21,3 +21,9 @@ hooman.getFullName()  # Maudy Ayunda
 # CHANGE PROPERTIES
 hooman.lastname = "Ayunda Faza"
 hooman.getFullName()  # Maudy Ayunda Faza
+
+# DELETE PROPERTIES
+# del hooman.age
+
+# DELETE OBJECTS
+# del hooman
