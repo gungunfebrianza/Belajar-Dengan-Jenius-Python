@@ -7,6 +7,8 @@ print(animal[-1])  # Negative Indexing
 print(type(animal[-1]))  # <class 'str'>
 print(animal[1:3])  # Range of Indexes
 print(type(animal[1:3]))  # <class 'list'>
+print(animal[2:])  # ['Monkey', 'Tiger', 'Tiger']
+print(animal[:3])  # ['Snake', 'Wolf', 'Monkey']
 
 print(animal.count('Tiger'))  # 2
 print(animal.index('Snake'))  # 0
