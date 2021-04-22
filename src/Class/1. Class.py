@@ -1,3 +1,4 @@
+# CREATE CLASS
 class Person:
     def __init__(self, firstname, lastname, age, eyecolor):
         self.firstname = firstname
@@ -8,6 +9,15 @@ class Person:
     def getFullName(self):
         print(self.firstname + " " + self.lastname)
 
-
+# CREATE OBJECT
 hooman = Person("Maudy", "Ayunda", 25, "Brown")
-hooman.getFullName()
+
+# ACCESS PROPERTIES
+print(hooman.age)  # 25
+
+# ACCESS METHODS
+hooman.getFullName()  # Maudy Ayunda
+
+# CHANGE PROPERTIES
+hooman.lastname = "Ayunda Faza"
+hooman.getFullName()  # Maudy Ayunda Faza
