@@ -23,4 +23,7 @@ listinteger = [44, 55, 66, 77, 88, 99]
 listboolean = [True, False, True, False]
 listheterogen = ["Avenger", 99, False]
 
+if "Avenger" in listheterogen:
+    print("Avenger is Exist!")
+
 
