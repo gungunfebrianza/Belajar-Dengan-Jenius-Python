@@ -20,9 +20,13 @@ print(animal[:3])  # ['Snake', 'Wolf', 'Monkey']
 
 # CHANGE ITEMS
 animal[0] = "Bear"
-print(animal[0])
+print(animal[0])  # Bear
 animal[1:2] = ["Bull", "Eagle"]
-print(animal)
+print(animal)  # ['Bear', 'Bull', 'Eagle', 'Monkey', 'Tiger', 'Tiger']
+
+# INSERT ITEMS
+animal.insert(0, "Shark")
+print(animal[0:2])  # ['Shark', 'Bear']
 
 # COUNT LIST
 print(animal.count('Tiger'))  # 2
