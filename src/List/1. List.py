@@ -1,5 +1,13 @@
 # CREATE LIST
 animal = ['Snake', 'Wolf', 'Monkey', 'Tiger', 'Tiger']
+print(animal)
+print(type(animal))  # <class 'list'>
+
+# LIST DATA TYPES
+liststring = ["Indonesia", "Japan", "South Korea", "Thailand"]
+listinteger = [44, 55, 66, 77, 88, 99]
+listboolean = [True, False, True, False]
+listheterogen = ["Avenger", 99, False]
 
 # ACCESS ITEMS
 print(animal[0])
@@ -10,18 +18,17 @@ print(type(animal[1:3]))  # <class 'list'>
 print(animal[2:])  # ['Monkey', 'Tiger', 'Tiger']
 print(animal[:3])  # ['Snake', 'Wolf', 'Monkey']
 
-print(animal.count('Tiger'))  # 2
-print(animal.index('Snake'))  # 0
-print(animal.index('Wolf'))  # 1
-print(len(animal))  # 5
-print(type(animal))  # <class 'list'>
+# CHANGE ITEMS
+animal[0] = "Bear"
+print(animal[0])
+animal[1:2] = ["Bull", "Eagle"]
 print(animal)
 
-# LIST DATA TYPES
-liststring = ["Indonesia", "Japan", "South Korea", "Thailand"]
-listinteger = [44, 55, 66, 77, 88, 99]
-listboolean = [True, False, True, False]
-listheterogen = ["Avenger", 99, False]
+# COUNT LIST
+print(animal.count('Tiger'))  # 2
+print(animal.index('Bear'))  # 0
+print(animal.index('Bull'))  # 1
+print(len(animal))  # 5
 
 if "Avenger" in listheterogen:
     print("Avenger is Exist!")
