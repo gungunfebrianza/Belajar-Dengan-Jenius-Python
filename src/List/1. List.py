@@ -25,14 +25,19 @@ animal[1:2] = ["Bull", "Eagle"]
 print(animal)  # ['Bear', 'Bull', 'Eagle', 'Monkey', 'Tiger', 'Tiger']
 
 # INSERT ITEMS
-animal.insert(0, "Shark")
+animal.insert(0, "Shark")  # Insert at specific Index without replace
 print(animal[0:2])  # ['Shark', 'Bear']
+animal.append("Dolphins")  # Add Item to the end of list
+print(animal[5:])  # ['Tiger', 'Tiger', 'Dolphins']
+insect = ["Mosquito", "Dragon Fly", "Butterfly"]
+animal.extend(insect)
+print(animal)
 
 # COUNT LIST
 print(animal.count('Tiger'))  # 2
-print(animal.index('Bear'))  # 0
-print(animal.index('Bull'))  # 1
-print(len(animal))  # 5
+print(animal.index('Bear'))  # 1
+print(animal.index('Bull'))  # 2
+print(len(animal))  # 11
 
 if "Avenger" in listheterogen:
     print("Avenger is Exist!")
