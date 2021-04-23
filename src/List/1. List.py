@@ -60,3 +60,10 @@ print(animal)
 # animal.clear()
 
 
+# LOOPING LIST
+for x in liststring:
+    print(x)
+
+for i in range(len(listheterogen)):
+    print(listheterogen[i])
+
