@@ -39,7 +39,16 @@ print(animal.index('Bear'))  # 1
 print(animal.index('Bull'))  # 2
 print(len(animal))  # 11
 
+# FIND LIST
 if "Avenger" in listheterogen:
     print("Avenger is Exist!")
+
+# REMOVE ITEMS
+animal.remove("Dolphins")
+print(animal)
+animal.pop(-2)  # Remove at specific index
+animal.pop()  # Remove the last Item
+print(animal)
+
 
 
