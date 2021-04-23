@@ -9,6 +9,7 @@ class Person:
     def getFullName(self):
         print(self.firstname + " " + self.lastname)
 
+
 # CREATE OBJECT
 hooman = Person("Maudy", "Ayunda", 25, "Brown")
 
