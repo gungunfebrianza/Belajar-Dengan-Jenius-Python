@@ -47,8 +47,16 @@ if "Avenger" in listheterogen:
 animal.remove("Dolphins")
 print(animal)
 animal.pop(-2)  # Remove at specific index
+print(animal)
 animal.pop()  # Remove the last Item
 print(animal)
+del animal[0]
+print(animal)
 
+# DELETE LIST
+# del animal
+
+# CLEAR LIST
+# animal.clear()
 
 
