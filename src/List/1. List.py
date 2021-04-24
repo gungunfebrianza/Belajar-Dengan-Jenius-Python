@@ -74,3 +74,6 @@ while i < len(listinteger):
 
 # LIST COMPREHENSION
 [print(x) for x in listheterogen]
+
+listcat = [x for x in animal if "Tiger" in x]
+print(listcat)  # ['Tiger', 'Tiger']
