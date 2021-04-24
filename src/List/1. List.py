@@ -83,5 +83,10 @@ print(listnoncat)
 # SORT LIST
 print(animal)  # Before Sort
 animal.sort()
-print(animal)  # After Sort
+print(animal)  # After Ascending Sort
+animal.sort(reverse=True)
+print(animal)  # After Descending Sort
+
+# COPY LIST
+listanimal = animal.copy()
 
