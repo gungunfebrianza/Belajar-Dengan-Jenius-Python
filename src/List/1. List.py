@@ -67,3 +67,7 @@ for x in liststring:
 for i in range(len(listheterogen)):
     print(listheterogen[i])
 
+i = 0
+while i < len(listinteger):
+    print(listinteger[i])
+    i = i + 1
