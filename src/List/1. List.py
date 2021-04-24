@@ -77,3 +77,5 @@ while i < len(listinteger):
 
 listcat = [x for x in animal if "Tiger" in x]
 print(listcat)  # ['Tiger', 'Tiger']
+listnoncat = [x for x in animal if x !="Tiger"]
+print(listnoncat)
