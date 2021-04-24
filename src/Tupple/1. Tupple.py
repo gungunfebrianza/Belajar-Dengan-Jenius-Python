@@ -28,3 +28,7 @@ print(animal[:3])  # ('Boar', 'Anoa', 'Eagle')
 # COUNT TUPPLE
 print(len(animal))  # 4
 
+# FIND TUPPLE
+if "Anoa" in animal:
+    print("Anoa is Exist!")  # Anoa is Exist!
+
