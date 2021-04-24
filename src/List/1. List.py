@@ -71,3 +71,6 @@ i = 0
 while i < len(listinteger):
     print(listinteger[i])
     i = i + 1
+
+# LIST COMPREHENSION
+[print(x) for x in listheterogen]
