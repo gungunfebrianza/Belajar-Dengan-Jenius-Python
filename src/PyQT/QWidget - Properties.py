@@ -8,4 +8,4 @@ window.setWindowTitle("Main Window - QWindow")
 window.resize(400, 400)  # Resize Window
 window.show()
 # Start the event loop.
-app.exec_()
+sys.exit(app.exec_())

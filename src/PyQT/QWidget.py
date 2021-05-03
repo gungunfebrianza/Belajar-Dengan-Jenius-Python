@@ -7,4 +7,4 @@ window = QWidget()
 window.setWindowTitle("Main Window - QWindow")
 window.show()
 # Start the event loop.
-app.exec_()
+sys.exit(app.exec_())
