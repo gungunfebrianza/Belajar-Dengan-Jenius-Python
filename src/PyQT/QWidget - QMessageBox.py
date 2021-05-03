@@ -26,4 +26,5 @@ btn1.move(100, 40)
 btn1.clicked.connect(displaymessage)
 
 window.show()
-sys.exit(app.exec_())
+# Start the event loop.
+sys.exit(app.exec_())  # Zero is considered “successful termination”

@@ -21,4 +21,5 @@ listbox1.addItem("Gun Gun Febrianza")
 listbox1.itemClicked.connect(list1clicked)
 
 window.show()
-sys.exit(app.exec_())
+# Start the event loop.
+sys.exit(app.exec_())  # Zero is considered “successful termination”
