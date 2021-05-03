@@ -2,7 +2,7 @@ import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QMessageBox
 
 
-def displaymessage():
+def display_message():
     # Add MessageBox / QMessageBox
     mbox1 = QMessageBox()
     # Set MessageBox Properties
@@ -10,7 +10,9 @@ def displaymessage():
     mbox1.setText("Hello World, Maudy !")
     mbox1.setDetailedText("Place for more details information.")
     mbox1.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
-    mbox1.exec()
+    return_value = mbox1.exec()
+    if return_value == QMessageBox.Ok:
+        print('OK clicked')
 
 
 app = QApplication(sys.argv)
@@ -23,7 +25,7 @@ btn1 = QPushButton(window)
 # Set Button Properties
 btn1.setText("Click Here")
 btn1.move(100, 40)
-btn1.clicked.connect(displaymessage)
+btn1.clicked.connect(display_message)
 
 window.show()
 # Start the event loop.

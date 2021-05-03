@@ -18,7 +18,10 @@ class Window(QWidget):
     def event_listbox1_clicked(self):
         item = self.listbox1.currentItem()
         print(item.text())
-        QMessageBox.information(self, "MessageBox", "Item : " + item.text())
+        self.display_message("MessageBox", "Item : " + item.text())
+
+    def display_message(self, title, text):
+        QMessageBox.information(self, title, text)
 
 
 app = QApplication(sys.argv)
