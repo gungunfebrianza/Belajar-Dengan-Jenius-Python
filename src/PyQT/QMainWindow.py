@@ -2,7 +2,7 @@ import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QLineEdit, QPushButton
 
 
-class Example(QMainWindow):
+class Window(QMainWindow):
 
     def __init__(self):
         super().__init__()
@@ -27,5 +27,5 @@ class Example(QMainWindow):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    ex = Example()
+    ex = Window()
     sys.exit(app.exec_())

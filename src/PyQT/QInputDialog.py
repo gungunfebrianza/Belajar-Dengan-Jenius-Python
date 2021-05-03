@@ -1,31 +1,34 @@
 import sys
-from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QLineEdit, QInputDialog)
+from PyQt5.QtWidgets import *
 
 
-class Example(QWidget):
+class Window(QWidget):
     def __init__(self):
         super().__init__()
-        self.initUI()
+        layout = QGridLayout()
+        self.setLayout(layout)
+        # Add Button / QPushButton
+        self.btn1 = QPushButton('Show Dialog', self)
+        # Set Button Properties
+        # self.btn1.move(20, 20)  # No Layout Mode
+        self.btn1.clicked.connect(self.show_input_dialog)
 
-    def initUI(self):
-        self.btn = QPushButton('Show Dialog', self)
-        self.btn.move(20, 20)
-        self.btn.clicked.connect(self.showDialog)
-
-        self.le = QLineEdit(self)
-        self.le.move(130, 22)
+        self.line1 = QLineEdit(self)
+        # self.line1.move(130, 22)  # No Layout Mode
+        layout.addWidget(self.btn1)
+        layout.addWidget(self.line1)
 
         self.setGeometry(300, 300, 300, 150)
-        self.setWindowTitle('Input Dialog')
-        self.show()
+        self.setWindowTitle('Main Window - QListBox')
 
-    def showDialog(self):
-        text, ok = QInputDialog.getText(self, 'input dialog', 'Is this ok?')
+    def show_input_dialog(self):
+        text, ok = QInputDialog.getText(self, 'input dialog', 'Input Your Name')
         if ok:
-            self.le.setText(str(text))
+            self.line1.setText(str(text))
 
 
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    ex = Example()
-    sys.exit(app.exec_())
+app = QApplication(sys.argv)
+window = Window()
+window.show()
+# Start the event loop.
+sys.exit(app.exec_())  # Zero is considered “successful termination”

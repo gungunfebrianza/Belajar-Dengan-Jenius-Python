@@ -33,7 +33,7 @@ class Window(QWidget):
 
 app = QApplication(sys.argv)  # QApplication([])
 window = Window()
-window.setWindowTitle("Main Window - QListBox OOP")  # Window Title
+window.setWindowTitle("Main Window - QListBox")  # Window Title
 window.resize(400, 400)  # Resize Window
 window.show()
 # Start the event loop.
