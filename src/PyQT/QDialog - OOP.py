@@ -7,6 +7,7 @@ class DlgMain(QDialog):
         super().__init__()
         self.setWindowTitle("Main Form")
 
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     dlgmain = DlgMain()

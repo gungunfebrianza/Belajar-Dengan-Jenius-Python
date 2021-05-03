@@ -10,17 +10,12 @@ class WindowExample(QWidget):
         self.setGeometry(200, 200, 400, 300)
         self.setWindowTitle("Form 1")
         self.setWindowIcon(QIcon('python.png'))
-
-        # self.setFixedHeight(400)
-        # self.setFixedWidth(300)
-
-        # self.setWindowOpacity(0.5)
         self.setStyleSheet('background-color:green')
-
         self.show()
 
 
-app = QApplication(sys.argv)
-window = WindowExample()
-sys.exit(app.exec_())  # Zero is considered “successful termination”
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = WindowExample()
+    sys.exit(app.exec_())  # Zero is considered “successful termination”
 
