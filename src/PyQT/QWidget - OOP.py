@@ -3,7 +3,7 @@ import sys
 from PyQt5.QtGui import QIcon
 
 
-class WindowExample(QWidget):
+class Window(QWidget):
     def __init__(self):
         super().__init__()
 
@@ -14,8 +14,9 @@ class WindowExample(QWidget):
         self.show()
 
 
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    window = WindowExample()
-    sys.exit(app.exec_())  # Zero is considered “successful termination”
+app = QApplication(sys.argv)
+window = Window()
+window.show()
+# Start the event loop.
+sys.exit(app.exec_())  # Zero is considered “successful termination”
 
