@@ -6,19 +6,19 @@ from PyQt5 import QtCore, QtWidgets
 class Window(QWidget):
     def __init__(self):
         QWidget.__init__(self)
-        # layout = QGridLayout()
-        # self.setLayout(layout)
+        layout = QGridLayout()
+        self.setLayout(layout)
         # Add MessageBox / QMessageBox
         self.mbox1 = QMessageBox()
 
         # Add Button / QPushButton
         self.btn1 = QPushButton()
-        self.btn1 = QtWidgets.QPushButton(self)
+        # self.btn1 = QtWidgets.QPushButton(self)
         # Set Button Properties
         self.btn1.setText("Click Here")
-        self.btn1.setGeometry(QtCore.QRect(170, 50, 75, 23))
+        # self.btn1.setGeometry(QtCore.QRect(170, 50, 75, 23))
         self.btn1.clicked.connect(self.display_message)
-        # layout.addWidget(self.btn1)
+        layout.addWidget(self.btn1)
 
     def display_message(self):
         # Set MessageBox Properties

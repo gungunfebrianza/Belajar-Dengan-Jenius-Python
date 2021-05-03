@@ -7,7 +7,9 @@ class Window(QWidget):
         QWidget.__init__(self)
         layout = QGridLayout()
         self.setLayout(layout)
+        # Add ListBox / QListBox
         self.listbox1 = QListWidget()
+        # Add MessageBox / QMessageBox
         self.mbox1 = QMessageBox()
         self.listbox1.insertItem(0, "Maudy")
         self.listbox1.insertItem(1, "Ayunda")
