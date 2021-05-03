@@ -15,7 +15,7 @@ def display_message():
         print('OK clicked')
 
 
-app = QApplication(sys.argv)
+app = QApplication(sys.argv)  # QApplication([])
 window = QWidget()
 window.setWindowTitle("Main Window - QMessageBox")  # Window Title
 window.resize(400, 400)  # Resize Window

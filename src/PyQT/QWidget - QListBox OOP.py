@@ -24,7 +24,7 @@ class Window(QWidget):
         QMessageBox.information(self, title, text)
 
 
-app = QApplication(sys.argv)
+app = QApplication(sys.argv)  # QApplication([])
 window = Window()
 window.setWindowTitle("Main Window - QListBox OOP")  # Window Title
 window.resize(400, 400)  # Resize Window

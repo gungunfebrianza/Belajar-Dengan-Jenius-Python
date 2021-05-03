@@ -6,7 +6,7 @@ def list1clicked():
     QMessageBox.information(window, "MessageBox", "List Item Clicked")
 
 
-app = QApplication(sys.argv)
+app = QApplication(sys.argv)  # QApplication([])
 window = QWidget()
 window.setWindowTitle("Main Window - QListBox")  # Window Title
 window.resize(400, 400)  # Resize Window

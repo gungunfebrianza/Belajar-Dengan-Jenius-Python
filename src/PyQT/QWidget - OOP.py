@@ -14,7 +14,7 @@ class Window(QWidget):
         self.show()
 
 
-app = QApplication(sys.argv)
+app = QApplication(sys.argv)  # QApplication([])
 window = Window()
 window.show()
 # Start the event loop.
