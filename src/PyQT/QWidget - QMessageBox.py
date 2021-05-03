@@ -10,7 +10,7 @@ def displaymessage():
     mbox1.setText("Hello World, Maudy !")
     mbox1.setDetailedText("Place for more details information.")
     mbox1.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
-    mbox1.exec_()
+    mbox1.exec()
 
 
 app = QApplication(sys.argv)
