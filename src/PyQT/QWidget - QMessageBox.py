@@ -2,15 +2,20 @@ import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QMessageBox
 
 
-def display_message():
-    # Add MessageBox / QMessageBox
-    mbox1 = QMessageBox()
+class Window(QWidget):
+    def __init__(self):
+        QWidget.__init__(self)
+        # Add MessageBox / QMessageBox
+        self.mbox1 = QMessageBox()
+
+
+def display_message(self):
     # Set MessageBox Properties
-    mbox1.setWindowTitle("Message Box")
-    mbox1.setText("Hello World, Maudy !")
-    mbox1.setDetailedText("Place for more details information.")
-    mbox1.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
-    return_value = mbox1.exec()
+    self.mbox1.setWindowTitle("Message Box")
+    self.mbox1.setText("Hello World, Maudy !")
+    self.mbox1.setDetailedText("Place for more details information.")
+    self.mbox1.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
+    return_value = self.mbox1.exec()
     if return_value == QMessageBox.Ok:
         print('OK clicked')
 

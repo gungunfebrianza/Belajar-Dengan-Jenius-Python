@@ -8,6 +8,7 @@ class Window(QWidget):
         layout = QGridLayout()
         self.setLayout(layout)
         self.listbox1 = QListWidget()
+        self.mbox1 = QMessageBox()
         self.listbox1.insertItem(0, "Maudy")
         self.listbox1.insertItem(1, "Ayunda")
         self.listbox1.insertItem(2, "Gun Gun")
@@ -21,7 +22,11 @@ class Window(QWidget):
         self.display_message("MessageBox", "Item : " + item.text())
 
     def display_message(self, title, text):
-        QMessageBox.information(self, title, text)
+        self.mbox1.setWindowTitle(title)
+        self.mbox1.setText(text)
+        self.mbox1.setDetailedText("Place for more details information.")
+        self.mbox1.exec()
+        # QMessageBox.information(self, title, text)
 
 
 app = QApplication(sys.argv)  # QApplication([])
