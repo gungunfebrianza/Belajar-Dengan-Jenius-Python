@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import QApplication, QWidget
 app = QApplication(sys.argv)  # QApplication([])
 window = QWidget()
 window.setWindowTitle("Main Window - QWindow")
-window.resize(400, 400)
+window.resize(400, 400)  # Resize Window
 window.show()
 # Start the event loop.
 app.exec_()
