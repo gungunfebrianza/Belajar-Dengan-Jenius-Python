@@ -9,6 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtCore import Qt
 
 
 class Ui_Form(object):
@@ -35,7 +36,8 @@ class Ui_Form(object):
 
         self.lineEdit.setObjectName("lineEdit")
         self.verticalLayout.addWidget(self.lineEdit)
-        self.lineEdit.textChanged[str].connect(self.event_line_edit_on_changed)
+        self.lineEdit.setMaxLength(5)  # Public Functions
+        self.lineEdit.textChanged[str].connect(self.event_line_edit_on_changed)  # Events
 
         self.label.setObjectName("label")
         self.verticalLayout.addWidget(self.label)
@@ -64,12 +66,13 @@ class Ui_Form(object):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Main Window - QLineEdit & QLabel"))
         self.label.setText(_translate("Form", "---"))
-        self.pushButton.setText(_translate("Form", "Change Label"))
+        self.pushButton.setText(_translate("Form", "Align Label"))
         self.pushButton_2.setText(_translate("Form", "Read Label"))
         self.pushButton_3.setText(_translate("Form", "Clear Line Edit"))
 
     def event_change_label(self):
         self.label.setText(self.lineEdit.text())
+        self.lineEdit.setAlignment(Qt.AlignCenter)
 
     def event_line_edit_on_changed(self):
         self.label.setText(self.lineEdit.text())
