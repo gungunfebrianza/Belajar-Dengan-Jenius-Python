@@ -10,6 +10,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QLineEdit
 
 
 class Ui_Form(object):
@@ -36,8 +37,10 @@ class Ui_Form(object):
 
         self.lineEdit.setObjectName("lineEdit")
         self.verticalLayout.addWidget(self.lineEdit)
-        self.lineEdit.setMaxLength(5)  # Public Functions
-        self.lineEdit.textChanged[str].connect(self.event_line_edit_on_changed)  # Events
+        self.lineEdit.setMaxLength(15)  # Public Functions
+        self.lineEdit.textChanged[str].connect(self.event_line_edit_on_changed)  # Events / Signals
+        self.lineEdit.returnPressed.connect(self.event_return_pressed)  # Events / Signals
+        self.lineEdit.setEchoMode(QLineEdit.EchoMode.Password)
 
         self.label.setObjectName("label")
         self.verticalLayout.addWidget(self.label)
@@ -50,14 +53,14 @@ class Ui_Form(object):
 
         self.pushButton.setObjectName("pushButton")
         self.horizontalLayout.addWidget(self.pushButton)
-        self.pushButton.clicked.connect(self.event_change_label)
+        self.pushButton.clicked.connect(self.event_change_label)  # Events / Signals
 
         self.pushButton_2.setObjectName("pushButton_2")
         self.horizontalLayout.addWidget(self.pushButton_2)
 
         self.pushButton_3.setObjectName("pushButton_3")
         self.horizontalLayout.addWidget(self.pushButton_3)
-        self.pushButton_3.clicked.connect(self.event_line_edit_clear)
+        self.pushButton_3.clicked.connect(self.event_line_edit_clear)  # Events / Signals
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -72,13 +75,18 @@ class Ui_Form(object):
 
     def event_change_label(self):
         self.label.setText(self.lineEdit.text())
-        self.lineEdit.setAlignment(Qt.AlignCenter)
+        self.lineEdit.setAlignment(Qt.AlignCenter)  # Public Functions
 
     def event_line_edit_on_changed(self):
-        self.label.setText(self.lineEdit.text())
+        self.label.setText(self.lineEdit.text())  # Public Functions
 
     def event_line_edit_clear(self):
-        self.lineEdit.clear()
+        self.lineEdit.selectAll()
+        self.lineEdit.cut()
+        # self.lineEdit.clear()  # Public Slots
+
+    def event_return_pressed(self):
+        self.label.setText("Return Pressed")
 
 
 if __name__ == "__main__":
