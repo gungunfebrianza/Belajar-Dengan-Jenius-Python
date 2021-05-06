@@ -1,7 +1,10 @@
+import time
+
 from PIL import Image, ImageDraw
 from collections import Counter
 import heapq
 import sys
+from time import sleep
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QVBoxLayout, QPushButton, QLineEdit
 from PyQt5.QtGui import QIcon, QPixmap
 
@@ -164,7 +167,7 @@ class Window(QWidget):
 
         self.lineedit1 = QLineEdit(self)
 
-        self.btn1 = QPushButton("Show Message", self)
+        self.btn1 = QPushButton("Process Image", self)
         self.btn1.clicked.connect(self.calculate_image)
         vbox.addWidget(self.btn1)
         vbox.addWidget(self.lineedit1)
@@ -182,15 +185,19 @@ class Window(QWidget):
                     model.render('frames/%06d.png' % i)
                 previous = error
             model.split()
+            #time.sleep(3)
+            # model.render(f'output{i}.png')
+            self.label.setPixmap(QPixmap(model.render(f'output{i}.png')))
+            self.resize(self.pixmap.width(), self.pixmap.height())
         model.render('output.png')
         self.label.setPixmap(QPixmap('output.png'))
         self.resize(self.pixmap.width(), self.pixmap.height())
         # print('-' * 32)
-        depth = Counter(x.depth for x in model.quads)
-        for key in sorted(depth):
-            value = depth[key]
-            n = 4 ** key
-            pct = 100.0 * value / n
+        # depth = Counter(x.depth for x in model.quads)
+        # for key in sorted(depth):
+        #     value = depth[key]
+        #     n = 4 ** key
+        #     pct = 100.0 * value / n
             # print('%3d %8d %8d %8.2f%%' % (key, n, value, pct))
         # print('-' * 32)
         # print('             %8d %8.2f%%' % (len(model.quads), 100))
