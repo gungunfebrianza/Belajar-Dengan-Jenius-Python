@@ -71,24 +71,22 @@ class Ui_Form(object):
         font.setWeight(75)
         self.pushButton1.setFont(font)
         self.pushButton1.setObjectName("pushButton1")
-        self.pushButton1.clicked.connect(self.event_remove_row)
-        self.verticalLayout_2.addWidget(self.pushButton1)
+        self.pushButton1.clicked.connect(self.event_add_item)
 
+        self.verticalLayout_2.addWidget(self.pushButton1)
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
-
-        # self.tableWidget1.insertRow(2)
-        # self.tableWidget1.insertRow(3)
-        # self.tableWidget1.setItem(1, 0, QtWidgets.QTableWidgetItem(str(self.tableWidget1.rowCount())))
         # self.tableWidget1.sortItems(0, Qt.AscendingOrder)
 
     # Todo : Add UI to Insert New Row At Specific Index
     def event_add_row(self):
+        self.tableWidget1.insertRow(1)
+
 
 
     # Todo : Add UI To Remove At Specific Row
     def event_remove_row(self):
-        self.tableWidget1.removeRow(1)  # Static Example, Use Parameter!
+        self.tableWidget1.removeRow(0)  # Static Example, Use Parameter!
 
 
 
