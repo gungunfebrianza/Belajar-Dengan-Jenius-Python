@@ -82,7 +82,8 @@ class Ui_Form(object):
     def event_add_row(self):
         self.tableWidget1.insertRow(1)
 
-
+    def event_set_item(self):
+        self.tableWidget1.setItem(0, 0, QtWidgets.QTableWidgetItem("0,0"))
 
     # Todo : Add UI To Remove At Specific Row
     def event_remove_row(self):
