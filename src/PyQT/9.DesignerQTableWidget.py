@@ -113,13 +113,9 @@ class Ui_Form(object):
         self.tableWidget1.sortItems(0, Qt.AscendingOrder)
 
     def get_item(self):
-        # text, ok = self.inputDialog1.getText('input dialog', 'Input Your Name')
-        # if ok:
-        #     self.mbox1.setWindowTitle("Message Box")
-        #     self.mbox1.setText("Total Rows : " + str(self.tableWidget1.rowCount()))
-        #     self.mbox1.exec()
-        langs =['C', 'c++', 'Java', 'Python', 'Javascript']
-        lang, done4 = QtWidgets.QInputDialog.getItem(self, 'Input Dialog', 'Language you know:', langs)
+        text, ok = self.inputDialog1.getText(self, 'input dialog', 'Input Your Name')
+        if ok:
+            self.line1.setText(str(text))
 
 
     def retranslateUi(self, Form):

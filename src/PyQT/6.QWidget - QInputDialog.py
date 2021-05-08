@@ -20,9 +20,10 @@ class Window(QWidget):
 
         self.setGeometry(300, 300, 300, 150)
         self.setWindowTitle('Main Window - QListBox')
+        self.inputDialog1 = QInputDialog()
 
     def show_text_input_dialog(self):
-        text, ok = QInputDialog.getText(self, 'input dialog', 'Input Your Name')
+        text, ok = self.inputDialog1.getText(self, 'input dialog', 'Input Your Name')
         if ok:
             self.line1.setText(str(text))
 
