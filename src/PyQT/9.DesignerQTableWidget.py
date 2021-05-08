@@ -13,19 +13,27 @@ from PyQt5.QtCore import Qt
 
 
 class Ui_Form(object):
+    def __init__(self):
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(Form)
+        self.verticalLayout = QtWidgets.QVBoxLayout()
+        self.tableWidget1 = QtWidgets.QTableWidget(Form)
+        self.pushButton1 = QtWidgets.QPushButton(Form)
+        self.mbox1 = QtWidgets.QMessageBox()
+
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(473, 487)
-        self.verticalLayout_2 = QtWidgets.QVBoxLayout(Form)
+
         self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.verticalLayout = QtWidgets.QVBoxLayout()
         self.verticalLayout.setObjectName("verticalLayout")
-        self.tableWidget1 = QtWidgets.QTableWidget(Form)
+
         self.tableWidget1.setObjectName("tableWidget1")
         self.tableWidget1.setColumnCount(4)
         self.tableWidget1.setRowCount(1)
+
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget1.setVerticalHeaderItem(0, item)
+
         item = QtWidgets.QTableWidgetItem()
         font = QtGui.QFont()
         font.setPointSize(12)
@@ -64,14 +72,15 @@ class Ui_Form(object):
         self.tableWidget1.setItem(0, 3, item)
         self.verticalLayout.addWidget(self.tableWidget1)
         self.verticalLayout_2.addLayout(self.verticalLayout)
-        self.pushButton1 = QtWidgets.QPushButton(Form)
+
         font = QtGui.QFont()
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
+
         self.pushButton1.setFont(font)
         self.pushButton1.setObjectName("pushButton1")
-        self.pushButton1.clicked.connect(self.event_add_item)
+        self.pushButton1.clicked.connect(self.count_row)
 
         self.verticalLayout_2.addWidget(self.pushButton1)
         self.retranslateUi(Form)
@@ -82,14 +91,21 @@ class Ui_Form(object):
     def event_add_row(self):
         self.tableWidget1.insertRow(1)
 
+    # Todo : Add UI to Set Item At Specific Row
     def event_set_item(self):
         self.tableWidget1.setItem(0, 0, QtWidgets.QTableWidgetItem("0,0"))
+        self.tableWidget1.setItem(0, 1, QtWidgets.QTableWidgetItem("0,1"))
+        self.tableWidget1.setItem(0, 2, QtWidgets.QTableWidgetItem("0,2"))
+        self.tableWidget1.setItem(0, 3, QtWidgets.QTableWidgetItem("0,3"))
 
     # Todo : Add UI To Remove At Specific Row
     def event_remove_row(self):
         self.tableWidget1.removeRow(0)  # Static Example, Use Parameter!
 
-
+    def count_row(self):
+        self.mbox1.setWindowTitle("Message Box")
+        self.mbox1.setText("Total Rows : " + str(self.tableWidget1.rowCount()))
+        self.mbox1.exec()
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
