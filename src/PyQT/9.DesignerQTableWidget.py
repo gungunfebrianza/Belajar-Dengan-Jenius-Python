@@ -85,7 +85,7 @@ class Ui_Form(object):
         self.verticalLayout_2.addWidget(self.pushButton1)
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
-        # self.tableWidget1.sortItems(0, Qt.AscendingOrder)
+        #
 
     # Todo : Add UI to Insert New Row At Specific Index
     def event_add_row(self):
@@ -106,6 +106,10 @@ class Ui_Form(object):
         self.mbox1.setWindowTitle("Message Box")
         self.mbox1.setText("Total Rows : " + str(self.tableWidget1.rowCount()))
         self.mbox1.exec()
+
+    # Todo : Add UI To Sort At Specific Column
+    def sort_asc(self):
+        self.tableWidget1.sortItems(0, Qt.AscendingOrder)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
