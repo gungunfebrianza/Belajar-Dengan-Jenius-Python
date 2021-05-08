@@ -11,7 +11,7 @@ class Window(QWidget):
         self.btn1 = QPushButton('Show Dialog', self)
         # Set Button Properties
         # self.btn1.move(20, 20)  # No Layout Mode
-        self.btn1.clicked.connect(self.show_item_input_dialog)
+        self.btn1.clicked.connect(self.show_multi_line_input_dialog)
 
         self.line1 = QLineEdit(self)
         # self.line1.move(130, 22)  # No Layout Mode
@@ -25,6 +25,11 @@ class Window(QWidget):
         text, ok = QInputDialog.getText(self, 'input dialog', 'Input Your Name')
         if ok:
             self.line1.setText(str(text))
+
+    def show_multi_line_input_dialog(self):
+        text, ok = QInputDialog.getMultiLineText(self, 'getMultiLineText', 'Story', "Enter story")
+        if ok and text:
+            print(text)
 
     def show_item_input_dialog(self):
         items = ["Maudy", "Ayunda", "Gun Gun", "Febrianza"]
