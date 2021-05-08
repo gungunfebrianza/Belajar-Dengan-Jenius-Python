@@ -11,7 +11,7 @@ class Window(QWidget):
         self.btn1 = QPushButton('Show Dialog', self)
         # Set Button Properties
         # self.btn1.move(20, 20)  # No Layout Mode
-        self.btn1.clicked.connect(self.show_double_input_dialog)
+        self.btn1.clicked.connect(self.show_int_input_dialog)
 
         self.line1 = QLineEdit(self)
         # self.line1.move(130, 22)  # No Layout Mode
@@ -42,6 +42,11 @@ class Window(QWidget):
         double, ok = QInputDialog.getDouble(self, 'getDouble', 'Enter double', 22.33, -10000, 10000, 2)
         if ok:
             print(double)
+
+    def show_int_input_dialog(self):
+        int, ok = QInputDialog.getInt(self, 'getInteger', 'Enter number', 25, 0, 100, 1)
+        if ok:
+            print(int)
 
 
 app = QApplication(sys.argv)
