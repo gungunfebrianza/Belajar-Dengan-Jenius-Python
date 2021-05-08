@@ -11,7 +11,7 @@ class Window(QWidget):
         self.btn1 = QPushButton('Show Dialog', self)
         # Set Button Properties
         # self.btn1.move(20, 20)  # No Layout Mode
-        self.btn1.clicked.connect(self.show_input_dialog)
+        self.btn1.clicked.connect(self.show_item_input_dialog)
 
         self.line1 = QLineEdit(self)
         # self.line1.move(130, 22)  # No Layout Mode
@@ -21,10 +21,17 @@ class Window(QWidget):
         self.setGeometry(300, 300, 300, 150)
         self.setWindowTitle('Main Window - QListBox')
 
-    def show_input_dialog(self):
+    def show_text_input_dialog(self):
         text, ok = QInputDialog.getText(self, 'input dialog', 'Input Your Name')
         if ok:
             self.line1.setText(str(text))
+
+    def show_item_input_dialog(self):
+        items = ["Maudy", "Ayunda", "Gun Gun", "Febrianza"]
+        item, ok = QInputDialog.getItem(self, 'getItem', 'Favourite Person', items, 0, False)
+
+        if ok and item:
+            print(item)
 
 
 app = QApplication(sys.argv)

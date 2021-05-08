@@ -19,6 +19,7 @@ class Ui_Form(object):
         self.tableWidget1 = QtWidgets.QTableWidget(Form)
         self.pushButton1 = QtWidgets.QPushButton(Form)
         self.mbox1 = QtWidgets.QMessageBox()
+        self.inputDialog1 = QtWidgets.QInputDialog()
 
     def setupUi(self, Form):
         Form.setObjectName("Form")
@@ -80,7 +81,7 @@ class Ui_Form(object):
 
         self.pushButton1.setFont(font)
         self.pushButton1.setObjectName("pushButton1")
-        self.pushButton1.clicked.connect(self.count_row)
+        self.pushButton1.clicked.connect(self.get_item)
 
         self.verticalLayout_2.addWidget(self.pushButton1)
         self.retranslateUi(Form)
@@ -110,6 +111,16 @@ class Ui_Form(object):
     # Todo : Add UI To Sort At Specific Column
     def sort_asc(self):
         self.tableWidget1.sortItems(0, Qt.AscendingOrder)
+
+    def get_item(self):
+        # text, ok = self.inputDialog1.getText('input dialog', 'Input Your Name')
+        # if ok:
+        #     self.mbox1.setWindowTitle("Message Box")
+        #     self.mbox1.setText("Total Rows : " + str(self.tableWidget1.rowCount()))
+        #     self.mbox1.exec()
+        langs =['C', 'c++', 'Java', 'Python', 'Javascript']
+        lang, done4 = QtWidgets.QInputDialog.getItem(self, 'Input Dialog', 'Language you know:', langs)
+
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
