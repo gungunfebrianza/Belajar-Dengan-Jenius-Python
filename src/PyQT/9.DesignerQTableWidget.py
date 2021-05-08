@@ -14,6 +14,7 @@ from PyQt5.QtCore import Qt
 
 class Ui_Form(object):
     def __init__(self):
+        super().__init__()
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(Form)
         self.verticalLayout = QtWidgets.QVBoxLayout()
         self.tableWidget1 = QtWidgets.QTableWidget(Form)
@@ -112,11 +113,11 @@ class Ui_Form(object):
     def sort_asc(self):
         self.tableWidget1.sortItems(0, Qt.AscendingOrder)
 
+    # https://bugs.python.org/issue39423
     def get_item(self):
         text, ok = self.inputDialog1.getText(self, 'input dialog', 'Input Your Name')
         if ok:
-            self.line1.setText(str(text))
-
+            print(text)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
