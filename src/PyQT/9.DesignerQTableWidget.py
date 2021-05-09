@@ -26,7 +26,7 @@ class window(QWidget):  # TEST
 
         self.tableWidget1.setObjectName("tableWidget1")
         self.tableWidget1.setColumnCount(4)
-        # self.tableWidget1.setRowCount(1)
+        self.tableWidget1.setRowCount(1)
 
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget1.setVerticalHeaderItem(0, item)
@@ -92,8 +92,8 @@ class window(QWidget):  # TEST
     def re_translate_ui(self, form):
         _translate = QtCore.QCoreApplication.translate
         form.setWindowTitle(_translate("Form", "Password Manager - QTableWidget"))
-        # item = self.tableWidget1.verticalHeaderItem(0)
-        # item.setText(_translate("Form", "1"))
+        item = self.tableWidget1.verticalHeaderItem(0)
+        item.setText(_translate("Form", "1"))
         item = self.tableWidget1.horizontalHeaderItem(0)
         item.setText(_translate("Form", "Account"))
         item = self.tableWidget1.horizontalHeaderItem(1)
@@ -104,19 +104,20 @@ class window(QWidget):  # TEST
         item.setText(_translate("Form", "Description"))
         __sortingEnabled = self.tableWidget1.isSortingEnabled()
         self.tableWidget1.setSortingEnabled(False)
-        # item = self.tableWidget1.item(0, 0)
-        # item.setText(_translate("Form", "Coinmarketcap"))
-        # item = self.tableWidget1.item(0, 1)
-        # item.setText(_translate("Form", "febrianza@gmail.com"))
-        # item = self.tableWidget1.item(0, 2)
-        # item.setText(_translate("Form", "***************"))
-        # item = self.tableWidget1.item(0, 3)
-        # item.setText(_translate("Form", "For API Development Purpose"))
+        item = self.tableWidget1.item(0, 0)
+        item.setText(_translate("Form", "Coinmarketcap"))
+        item = self.tableWidget1.item(0, 1)
+        item.setText(_translate("Form", "febrianza@gmail.com"))
+        item = self.tableWidget1.item(0, 2)
+        item.setText(_translate("Form", "***************"))
+        item = self.tableWidget1.item(0, 3)
+        item.setText(_translate("Form", "For API Development Purpose"))
 
         self.tableWidget1.setSortingEnabled(__sortingEnabled)
         self.pushButton1.setText(_translate("Form", "Add Password"))
-
-        self.pushButton1.clicked.connect(self.get_item)
+        self.tableWidget1.itemChanged.connect(self.event_item_changed)
+        self.tableWidget1.itemClicked.connect(self.event_item_clicked)
+        self.pushButton1.clicked.connect(self.event_set_item)
 
     # Todo : Add UI to Insert New Row At Specific Index
     def event_add_row(self):
@@ -158,15 +159,25 @@ class window(QWidget):  # TEST
 
         acc, ok = self.inputDialog1.getText(self, 'Input Dialog', 'Username?')
         if ok:
-            self.tableWidget1.setItem(current_row, current_row+1, QtWidgets.QTableWidgetItem(acc))
+            self.tableWidget1.setItem(current_row, 1, QtWidgets.QTableWidgetItem(acc))
 
         acc, ok = self.inputDialog1.getText(self, 'Input Dialog', 'Password?')
         if ok:
-            self.tableWidget1.setItem(current_row, current_row+2, QtWidgets.QTableWidgetItem(acc))
+            self.tableWidget1.setItem(current_row, 2, QtWidgets.QTableWidgetItem(acc))
 
         acc, ok = self.inputDialog1.getMultiLineText(self, 'Input Dialog', 'Descriptions?')
         if ok:
-            self.tableWidget1.setItem(current_row, current_row+3, QtWidgets.QTableWidgetItem(acc))
+            self.tableWidget1.setItem(current_row, 3, QtWidgets.QTableWidgetItem(acc))
+
+    def event_item_changed(self):
+        self.mbox1.setWindowTitle("Message Box")
+        self.mbox1.setText("Item Changed")
+        self.mbox1.exec()
+
+    def event_item_clicked(self):
+        self.mbox1.setWindowTitle("Message Box")
+        self.mbox1.setText("Item Clicked")
+        self.mbox1.exec()
 
 
 if __name__ == "__main__":
