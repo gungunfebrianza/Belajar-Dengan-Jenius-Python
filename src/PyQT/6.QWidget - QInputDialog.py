@@ -1,5 +1,6 @@
 import sys
-from PyQt6.QtWidgets import *
+from PyQt6.QtWidgets import QWidget, QInputDialog, QGridLayout, QPushButton, \
+    QApplication, QLineEdit
 
 
 class Window(QWidget):
