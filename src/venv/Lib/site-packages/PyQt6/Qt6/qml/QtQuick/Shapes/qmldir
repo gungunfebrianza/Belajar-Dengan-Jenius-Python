@@ -1,0 +1,5 @@
+module QtQuick.Shapes
+plugin qmlshapesplugin
+classname QmlShapesPlugin
+typeinfo plugins.qmltypes
+

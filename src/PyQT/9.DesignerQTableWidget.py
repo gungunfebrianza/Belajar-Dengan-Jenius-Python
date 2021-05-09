@@ -12,14 +12,14 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import Qt
 
 
-class Ui_Form(object):
+class window(object):
     def __init__(self):
         super().__init__()
-        self.verticalLayout_2 = QtWidgets.QVBoxLayout(Form)
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(windowQWidget)
         self.verticalLayout = QtWidgets.QVBoxLayout()
-        self.tableWidget1 = QtWidgets.QTableWidget(Form)
-        self.pushButton1 = QtWidgets.QPushButton(Form)
-        self.mbox1 = QtWidgets.QMessageBox()
+        self.tableWidget1 = QtWidgets.QTableWidget(windowQWidget)
+        self.pushButton1 = QtWidgets.QPushButton(windowQWidget)
+        self.mbox1 = QtWidgets.QMessageBox(windowQWidget)
         self.inputDialog1 = QtWidgets.QInputDialog()
 
     def setupUi(self, Form):
@@ -149,8 +149,8 @@ class Ui_Form(object):
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    Form = QtWidgets.QWidget()
-    ui = Ui_Form()
-    ui.setupUi(Form)
-    Form.show()
+    windowQWidget = QtWidgets.QWidget()
+    gui = window()
+    gui.setupUi(windowQWidget)
+    windowQWidget.show()
     sys.exit(app.exec_())

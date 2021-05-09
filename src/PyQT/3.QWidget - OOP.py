@@ -1,6 +1,6 @@
-from PyQt5.QtWidgets import QApplication, QWidget
 import sys
-from PyQt5.QtGui import QIcon
+from PyQt6.QtWidgets import QApplication, QWidget
+from PyQt6.QtGui import QIcon
 
 
 class Window(QWidget):
