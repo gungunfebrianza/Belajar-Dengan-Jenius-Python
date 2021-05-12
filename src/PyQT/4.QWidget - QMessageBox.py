@@ -16,7 +16,7 @@ class Window(QWidget):
         # Set Button Properties
         self.btn1.setText("Click Here")
         # self.btn1.setGeometry(QtCore.QRect(170, 50, 75, 23))
-        self.btn1.clicked.connect(self.display_information)
+        self.btn1.clicked.connect(self.static_way)
         layout.addWidget(self.btn1)
 
     def display_warning(self):
@@ -38,6 +38,13 @@ class Window(QWidget):
         result = self.mbox1.exec()
         if result == QMessageBox.StandardButtons.Yes:
             print(result)
+
+    def static_way(self):
+        result = QMessageBox.information(self, "Title Here..", "Message here..",
+                                         QMessageBox.StandardButtons.Help | QMessageBox.StandardButtons.No,
+                                         QMessageBox.StandardButtons.Help)
+        print(result)
+
 
 app = QApplication(sys.argv)  # QApplication([])
 window = Window()
