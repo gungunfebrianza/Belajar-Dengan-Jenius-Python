@@ -37,4 +37,4 @@ window.resize(400, 400)  # Resize Window
 
 window.show()
 # Start the event loop.
-sys.exit(app.exec_())  # Zero is considered “successful termination”
+sys.exit(app.exec())  # Zero is considered “successful termination”
