@@ -58,4 +58,4 @@ if __name__ == "__main__":
     ui = myWindow()
     ui.setupUi(Form)
     Form.show()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())
