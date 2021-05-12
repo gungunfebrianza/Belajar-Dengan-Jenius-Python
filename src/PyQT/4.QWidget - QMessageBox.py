@@ -35,8 +35,9 @@ class Window(QWidget):
                                       QMessageBox.StandardButtons.Close |
                                       QMessageBox.StandardButtons.Help)  # https://doc.qt.io/qt-6/qmessagebox.html#StandardButton-enum
         self.mbox1.setDefaultButton(QMessageBox.StandardButtons.Help)
-        self.mbox1.exec()
-
+        result = self.mbox1.exec()
+        if result == QMessageBox.StandardButtons.Yes:
+            print(result)
 
 app = QApplication(sys.argv)  # QApplication([])
 window = Window()
