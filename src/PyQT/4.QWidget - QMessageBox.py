@@ -19,20 +19,22 @@ class Window(QWidget):
         self.btn1.clicked.connect(self.display_information)
         layout.addWidget(self.btn1)
 
-    def display_message(self):
+    def display_warning(self):
         # Set MessageBox Properties
         self.mbox1.setWindowTitle("Message Box")
         self.mbox1.setText("Hello World, Maudy !")
+        self.mbox1.setIcon(QMessageBox.Icon.Warning)  # https://doc.qt.io/qt-6/qmessagebox.html#Icon-enum
         self.mbox1.setDetailedText("Place for more details information.")
         self.mbox1.exec()
 
     def display_information(self):
         self.mbox1.setWindowTitle("Message Box")
         self.mbox1.setText("Hello World, Maudy !")
-        self.mbox1.setIcon(QMessageBox.Icon.Information)
+        self.mbox1.setIcon(QMessageBox.Icon.Information)  # https://doc.qt.io/qt-6/qmessagebox.html#Icon-enum
         self.mbox1.setStandardButtons(QMessageBox.StandardButtons.Yes |
                                       QMessageBox.StandardButtons.Close |
                                       QMessageBox.StandardButtons.Help)  # https://doc.qt.io/qt-6/qmessagebox.html#StandardButton-enum
+        self.mbox1.setDefaultButton(QMessageBox.StandardButtons.Help)
         self.mbox1.exec()
 
 
