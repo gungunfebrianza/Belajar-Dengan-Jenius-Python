@@ -196,6 +196,7 @@ class window(QWidget):
         self.pushButtonRedo.clicked.connect(self.redo_command)
         self.pushButtonDeselect.clicked.connect(self.deselect)
         self.lineEdit1.cursorPositionChanged.connect(self.read_cursor_position)
+        self.pushButtonSetText.clicked.connect(self.change_line_edit1)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
@@ -259,6 +260,9 @@ class window(QWidget):
             self.labelSelectionStart.setText("Selection Start At : " + str(self.lineEdit1.selectionStart()))
             self.labelSelectedLen.setText("Selection Length : " + str(self.lineEdit1.selectionLength()))
             self.labelSelectionEnd.setText("Selection End At : " + str(self.lineEdit1.selectionEnd()))
+
+    def change_line_edit1(self):
+        self.lineEdit1.setText(self.lineEdit2.text())
 
 
 if __name__ == "__main__":
