@@ -148,7 +148,7 @@ class Model(object):
 def main():
     args = sys.argv[1:]
     if len(args) != 1:
-        print('Usage: python main.py input_image')
+        print('Usage: python connect.py input_image')
         return
     model = Model(args[0])
     previous = None
