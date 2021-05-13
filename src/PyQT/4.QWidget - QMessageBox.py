@@ -16,8 +16,12 @@ class Window(QWidget):
         # Set Button Properties
         self.btn1.setText("Click Here")
         # self.btn1.setGeometry(QtCore.QRect(170, 50, 75, 23))
-        self.btn1.clicked.connect(self.static_way)
+        self.btn1.clicked.connect(self.new_custom_button)
         layout.addWidget(self.btn1)
+        self.btn2 = QPushButton()
+        self.mbox2 = QMessageBox()
+        self.btn2 = self.mbox2.addButton("Yeaah", QMessageBox.ButtonRole.AcceptRole)
+        # https://doc.qt.io/qt-6/qmessagebox.html#ButtonRole-enum
 
     def display_warning(self):
         # Set MessageBox Properties
@@ -44,6 +48,11 @@ class Window(QWidget):
                                          QMessageBox.StandardButtons.Help | QMessageBox.StandardButtons.No,
                                          QMessageBox.StandardButtons.Help)
         print(result)
+
+    def new_custom_button(self):
+        self.mbox2.setWindowTitle("Message Box")
+        self.mbox2.setText("Hello World, Maudy !")
+        self.mbox2.exec()
 
 
 app = QApplication(sys.argv)  # QApplication([])
