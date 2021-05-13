@@ -69,7 +69,7 @@ class window(QWidget):
         QtCore.QMetaObject.connectSlotsByName(Form)
 
         self.pushButton1.clicked.connect(self.add_item)
-        self.pushButton2.clicked.connect(self.insert_item)
+        self.pushButton2.clicked.connect(self.edit_item)
         self.listWidget1.itemClicked.connect(self.info_current_item)
 
     def retranslateUi(self, Form):
@@ -96,6 +96,12 @@ class window(QWidget):
     def info_current_item(self):
         item = self.listWidget1.currentItem()
         self.label2.setText(item.text())
+
+    def edit_item(self):
+        item = self.listWidget1.currentItem()
+        item.setText(self.lineEdit2.text())
+        self.lineEdit2.clear()
+        self.lineEdit2.setFocus()
 
 
 if __name__ == "__main__":
