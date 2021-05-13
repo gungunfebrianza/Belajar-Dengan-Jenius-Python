@@ -8,6 +8,7 @@
 
 from PyQt6 import QtCore, QtGui, QtWidgets
 from PyQt6.QtWidgets import QWidget
+from PyQt6.QtGui import QIntValidator
 
 
 class window(QWidget):
@@ -29,7 +30,7 @@ class window(QWidget):
         self.pushButtonSetText = QtWidgets.QPushButton(self.widget1)
         self.pushButtonRead = QtWidgets.QPushButton(self.widget1)
         self.pushButtonReadPlaceHolder = QtWidgets.QPushButton(self.widget1)
-        self.pushButtonReadSelectedText = QtWidgets.QPushButton(self.widget1)
+        self.pushButtonChangeFont = QtWidgets.QPushButton(self.widget1)
         self.widget2 = QtWidgets.QWidget(windowQWidget)
         self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.widget2)
         self.pushButtonSetMaxLen = QtWidgets.QPushButton(self.widget2)
@@ -106,8 +107,8 @@ class window(QWidget):
         self.pushButtonReadPlaceHolder.setObjectName("pushButtonReadPlaceHolder")
         self.horizontalLayout_3.addWidget(self.pushButtonReadPlaceHolder)
 
-        self.pushButtonReadSelectedText.setObjectName("pushButtonReadSelectedText")
-        self.horizontalLayout_3.addWidget(self.pushButtonReadSelectedText)
+        self.pushButtonChangeFont.setObjectName("pushButtonChangeFont")
+        self.horizontalLayout_3.addWidget(self.pushButtonChangeFont)
 
         self.widget2.setGeometry(QtCore.QRect(10, 250, 608, 26))
         self.widget2.setObjectName("widget2")
@@ -200,7 +201,7 @@ class window(QWidget):
         self.pushButtonSetText.clicked.connect(self.change_line_edit1)
         self.pushButtonRead.clicked.connect(self.read_line_edit1)
         self.pushButtonReadPlaceHolder.clicked.connect(self.read_placeholder)
-        self.pushButtonReadSelectedText.clicked.connect(self.read_selected_text)
+        self.pushButtonChangeFont.clicked.connect(self.integer_validator)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
@@ -215,7 +216,7 @@ class window(QWidget):
         self.pushButtonSetText.setText(_translate("Form", "Change Line Edit 1"))
         self.pushButtonRead.setText(_translate("Form", "Read Line Edit 1"))
         self.pushButtonReadPlaceHolder.setText(_translate("Form", "Read Placeholder Text"))
-        self.pushButtonReadSelectedText.setText(_translate("Form", "Read Selected Text"))
+        self.pushButtonChangeFont.setText(_translate("Form", "Change Font"))
         self.pushButtonSetMaxLen.setText(_translate("Form", "Set Maximum Length Line Edit 1"))
         self.pushButtonSetInputMask.setText(_translate("Form", "Set Input Mask Line Edit 1"))
         self.pushButtonSetAlign.setText(_translate("Form", "Set Align Line Edit 1"))
@@ -282,9 +283,9 @@ class window(QWidget):
             self.lineEdit2.copy()
             self.lineEdit2.clear()
             self.lineEdit2.paste()
-            print(self.lineEdit1.setSelection(self.lineEdit1.selectionStart(), self.lineEdit1.selectionLength()))
-            print(self.lineEdit1.selectionStart())
-            print(self.lineEdit1.selectionLength())
+
+    def integer_validator(self):
+        self.lineEdit1.setValidator(QIntValidator(0, 10000000))
 
 
 if __name__ == "__main__":
