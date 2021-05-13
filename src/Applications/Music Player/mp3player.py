@@ -73,6 +73,7 @@ class window(QWidget):
         self.btnPlay.clicked.connect(self.play_music)
         self.btnStop.clicked.connect(self.stop_music)
         self.btnPause.clicked.connect(self.pause_music)
+        self.btnNext.clicked.connect(self.next_music)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
@@ -112,6 +113,10 @@ class window(QWidget):
             pygame.mixer.music.pause()
             self.paused = True
 
+    def next_music(self):
+        current_row = self.listWidget.currentRow()
+        item = self.listWidget.item(current_row+1)
+        self.listWidget.setCurrentItem(item)
 
 
 if __name__ == "__main__":
