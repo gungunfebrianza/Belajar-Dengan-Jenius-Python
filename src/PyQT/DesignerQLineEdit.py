@@ -206,6 +206,7 @@ class window(QWidget):
         self.pushButtonSetInputMask.clicked.connect(self.set_input_mask)
         self.pushButtonSetAlign.clicked.connect(self.set_align)
         self.pushButtonSetEcho.clicked.connect(self.echo_mode)
+        self.pushButtonSetReadOnly.clicked.connect(self.set_read_only)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
@@ -316,6 +317,13 @@ class window(QWidget):
             self.lineEdit1.setEchoMode(QtWidgets.QLineEdit.EchoMode.NoEcho)
         else:
             self.lineEdit1.setEchoMode(QtWidgets.QLineEdit.EchoMode.Normal)
+
+    def set_read_only(self):
+        if self.comboBox3.currentText() == "True":
+            self.lineEdit1.setReadOnly(True)
+        else:
+            self.lineEdit1.setReadOnly(False)
+
 
 
 if __name__ == "__main__":
