@@ -71,6 +71,7 @@ class window(QWidget):
         self.pushButton1.clicked.connect(self.add_item)
         self.pushButton2.clicked.connect(self.edit_item)
         self.listWidget1.itemClicked.connect(self.info_current_item)
+        self.pushButton3.clicked.connect(self.remove_item)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
@@ -102,6 +103,10 @@ class window(QWidget):
         item.setText(self.lineEdit2.text())
         self.lineEdit2.clear()
         self.lineEdit2.setFocus()
+
+    def remove_item(self):
+        item = self.listWidget1.currentRow()
+        self.listWidget1.takeItem(item)
 
 
 if __name__ == "__main__":
