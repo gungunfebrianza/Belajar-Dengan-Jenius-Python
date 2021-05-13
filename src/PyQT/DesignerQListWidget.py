@@ -68,6 +68,8 @@ class window(QWidget):
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
+        self.pushButton1.clicked.connect(self.insert_item)
+
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "QWidget - QListBox"))
@@ -79,6 +81,12 @@ class window(QWidget):
         self.pushButton4.setText(_translate("Form", "Clear List"))
         self.pushButton6.setText(_translate("Form", "Sort Items"))
         self.pushButton7.setText(_translate("Form", "Find Items"))
+
+    def insert_item(self):
+        self.listWidget1.addItem(self.lineEdit1.text())
+        self.lineEdit1.clear()
+        self.lineEdit1.setFocus()
+        self.label1.setText("Total Items : " + str(self.listWidget1.count()))
 
 
 if __name__ == "__main__":
