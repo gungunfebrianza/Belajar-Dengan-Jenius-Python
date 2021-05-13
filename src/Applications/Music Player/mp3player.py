@@ -51,6 +51,7 @@ class window(QWidget):
 
         self.btnStop.setGeometry(QtCore.QRect(210, 210, 91, 41))
         self.btnStop.setObjectName("btnStop")
+        self.btnStop.setIcon(QtGui.QIcon("Stop.png"))
 
         self.btnNext.setGeometry(QtCore.QRect(310, 210, 91, 41))
         self.btnNext.setObjectName("btnNext")
@@ -76,7 +77,7 @@ class window(QWidget):
         self.btnClearList.setText(_translate("Form", "Clear List"))
         self.btnPlay.setText(_translate("Form", ""))
         self.btnPause.setText(_translate("Form", "Pause"))
-        self.btnStop.setText(_translate("Form", "Stop"))
+        self.btnStop.setText(_translate("Form", ""))
         self.btnNext.setText(_translate("Form", "Next"))
         self.btnPrev.setText(_translate("Form", "Prev"))
         self.labelPlayed.setText(_translate("Form", "Music Played : "))
