@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'DesignerQListWidget.ui'
+# Form implementation generated from reading ui file '7.DesignerQListWidget.ui'
 #
 # Created by: PyQt6 UI code generator 6.0.3
 #
@@ -119,11 +119,8 @@ class window(QWidget):
         self.listWidget1.sortItems(Qt.SortOrder.AscendingOrder)
 
     def find_item(self):
-        item = self.listWidget1.item(20)
-        self.listWidget1.scrollToItem(item)
-        print(item.isSelected())
-        item.setSelected(True)
-        print(item.isSelected())
+        result = self.listWidget1.findItems(self.lineEdit3.text(), Qt.MatchFlags.MatchExactly)
+        QtWidgets.QMessageBox.information(self, "Find Item", "Found " + str(len(result)) + " Items")
 
     def scroll_to_item(self):
         item = self.listWidget1.item(20)
