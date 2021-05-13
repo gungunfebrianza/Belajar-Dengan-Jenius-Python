@@ -203,6 +203,7 @@ class window(QWidget):
         self.pushButtonReadPlaceHolder.clicked.connect(self.read_placeholder)
         self.pushButtonChangeFont.clicked.connect(self.change_font)
         self.pushButtonSetMaxLen.clicked.connect(self.change_max_length)
+        self.pushButtonSetInputMask.clicked.connect(self.set_input_mask)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
@@ -293,6 +294,9 @@ class window(QWidget):
 
     def change_max_length(self):
         self.lineEdit1.setMaxLength(int(self.lineEditMaxLen.text()))
+
+    def set_input_mask(self):
+        self.lineEdit1.setInputMask(self.lineEditInputMask.text())
 
 
 if __name__ == "__main__":
