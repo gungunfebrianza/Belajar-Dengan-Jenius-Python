@@ -188,7 +188,8 @@ class window(QWidget):
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
-        self.pushButtonSelectAll.clicked.connect(self.select_all())
+        self.pushButtonSelectAll.clicked.connect(self.select_all)
+        self.pushButtonCopy.clicked.connect(self.copy_text)
         self.lineEdit1.cursorPositionChanged.connect(self.read_cursor_position)
 
     def retranslateUi(self, Form):
@@ -228,6 +229,9 @@ class window(QWidget):
 
     def select_all(self):
         self.lineEdit1.selectAll()
+
+    def copy_text(self):
+        self.lineEdit1.copy()
 
     def read_cursor_position(self):
         self.labelCursorPosition.setText("Cursor Position : " + str(self.lineEdit1.cursorPosition()))
