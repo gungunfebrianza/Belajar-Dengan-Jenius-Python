@@ -5,8 +5,8 @@ from collections import Counter
 import heapq
 import sys
 from time import sleep
-from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QVBoxLayout, QPushButton, QLineEdit
-from PyQt5.QtGui import QIcon, QPixmap
+from PyQt6.QtWidgets import QApplication, QWidget, QLabel, QVBoxLayout, QPushButton, QLineEdit
+from PyQt6.QtGui import QIcon, QPixmap
 
 MODE_RECTANGLE = 1
 MODE_ELLIPSE = 2
@@ -185,7 +185,7 @@ class Window(QWidget):
                     model.render('frames/%06d.png' % i)
                 previous = error
             model.split()
-            #time.sleep(3)
+            # time.sleep(3)
             # model.render(f'output{i}.png')
             self.label.setPixmap(QPixmap(model.render(f'output{i}.png')))
             self.resize(self.pixmap.width(), self.pixmap.height())
@@ -208,4 +208,4 @@ if __name__ == '__main__':
     ex = Window()
     ex.show()
     # Start the event loop.
-    sys.exit(app.exec_())  # Zero is considered “successful termination”
+    sys.exit(app.exec())  # Zero is considered “successful termination”
