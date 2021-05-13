@@ -195,6 +195,8 @@ class window(QWidget):
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
+        self.pushButtonSelectAll.clicked.connect(self.select_all)
+
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "QWidget - QLineEdit"))
@@ -229,6 +231,9 @@ class window(QWidget):
         self.labelSelectionStart.setText(_translate("Form", "Selection Start At"))
         self.labelSelectedLen.setText(_translate("Form", "Selected Length"))
         self.labelSelectionEnd.setText(_translate("Form", "Selection End At"))
+
+    def select_all(self):
+        self.lineEdit1.selectAll()
 
 
 if __name__ == "__main__":
