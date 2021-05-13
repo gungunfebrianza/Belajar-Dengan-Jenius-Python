@@ -202,6 +202,7 @@ class window(QWidget):
         self.pushButtonRead.clicked.connect(self.read_line_edit1)
         self.pushButtonReadPlaceHolder.clicked.connect(self.read_placeholder)
         self.pushButtonChangeFont.clicked.connect(self.change_font)
+        self.pushButtonSetMaxLen.clicked.connect(self.change_max_length)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
@@ -284,11 +285,15 @@ class window(QWidget):
             self.lineEdit2.clear()
             self.lineEdit2.paste()
 
-    def integer_validator(self):
-        self.lineEdit1.setValidator(QIntValidator(0, 10000000))
-
     def change_font(self):
-        self.lineEdit1.setFont(QFont("Arial",20))
+        self.lineEdit1.setFont(QFont("Arial", 20))
+
+    def integer_validator(self):
+        self.lineEditMaxLen.setValidator(QIntValidator(0, 10000000))
+
+    def change_max_length(self):
+        self.lineEdit1.setMaxLength(int(self.lineEditMaxLen.text()))
+
 
 if __name__ == "__main__":
     import sys
