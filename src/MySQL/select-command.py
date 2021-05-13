@@ -34,3 +34,9 @@ my_cursor.execute("SELECT * FROM users WHERE name LIKE '%i%' AND age = 29 AND us
 result = my_cursor.fetchall()
 for row in result:
     print(row)
+
+# LIMIT RESULTS
+my_cursor.execute("SELECT * FROM users LIMIT 3 OFFSET 1")
+result = my_cursor.fetchall()
+for row in result:
+    print(row)
