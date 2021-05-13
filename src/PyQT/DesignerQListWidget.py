@@ -68,7 +68,8 @@ class window(QWidget):
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
-        self.pushButton1.clicked.connect(self.insert_item)
+        self.pushButton1.clicked.connect(self.add_item)
+        self.pushButton2.clicked.connect(self.insert_item)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
@@ -82,11 +83,14 @@ class window(QWidget):
         self.pushButton6.setText(_translate("Form", "Sort Items"))
         self.pushButton7.setText(_translate("Form", "Find Items"))
 
-    def insert_item(self):
+    def add_item(self):
         self.listWidget1.addItem(self.lineEdit1.text())
         self.lineEdit1.clear()
         self.lineEdit1.setFocus()
         self.label1.setText("Total Items : " + str(self.listWidget1.count()))
+
+    def insert_item(self):
+        self.listWidget1.insertItem(3, "Data in row three")
 
 
 if __name__ == "__main__":
