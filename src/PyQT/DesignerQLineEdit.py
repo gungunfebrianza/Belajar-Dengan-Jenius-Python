@@ -196,9 +196,11 @@ class window(QWidget):
         self.pushButtonRedo.clicked.connect(self.redo_command)
         self.pushButtonDeselect.clicked.connect(self.deselect)
         self.lineEdit1.cursorPositionChanged.connect(self.read_cursor_position)
+        self.lineEdit1.cursorPositionChanged.connect(self.read_selected_text)
         self.pushButtonSetText.clicked.connect(self.change_line_edit1)
         self.pushButtonRead.clicked.connect(self.read_line_edit1)
         self.pushButtonReadPlaceHolder.clicked.connect(self.read_placeholder)
+        self.pushButtonReadSelectedText.clicked.connect(self.read_selected_text)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
@@ -272,6 +274,17 @@ class window(QWidget):
     def read_placeholder(self):
         self.lineEdit1.setPlaceholderText("This is Placeholder on Line Edit 1..")
         self.lineEdit2.setText(self.lineEdit1.placeholderText())
+
+    def read_selected_text(self):
+        if self.lineEdit1.hasSelectedText():
+            self.lineEdit2.setText(self.lineEdit1.text())
+            self.lineEdit2.setSelection(self.lineEdit1.selectionStart(), self.lineEdit1.selectionLength())
+            self.lineEdit2.copy()
+            self.lineEdit2.clear()
+            self.lineEdit2.paste()
+            print(self.lineEdit1.setSelection(self.lineEdit1.selectionStart(), self.lineEdit1.selectionLength()))
+            print(self.lineEdit1.selectionStart())
+            print(self.lineEdit1.selectionLength())
 
 
 if __name__ == "__main__":
