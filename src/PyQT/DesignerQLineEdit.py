@@ -205,6 +205,7 @@ class window(QWidget):
         self.pushButtonSetMaxLen.clicked.connect(self.change_max_length)
         self.pushButtonSetInputMask.clicked.connect(self.set_input_mask)
         self.pushButtonSetAlign.clicked.connect(self.set_align)
+        self.pushButtonSetEcho.clicked.connect(self.echo_mode)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
@@ -305,6 +306,16 @@ class window(QWidget):
             self.lineEdit1.setAlignment(Qt.Alignment.AlignLeft)
         else:
             self.lineEdit1.setAlignment(Qt.Alignment.AlignRight)
+
+    def echo_mode(self):
+        if self.comboBox2.currentText() == "Password Mode":
+            self.lineEdit1.setEchoMode(QtWidgets.QLineEdit.EchoMode.Password)
+        elif self.comboBox2.currentText() == "Password Echo On Edit":
+            self.lineEdit1.setEchoMode(QtWidgets.QLineEdit.EchoMode.PasswordEchoOnEdit)
+        elif self.comboBox2.currentText() == "No Echo Mode":
+            self.lineEdit1.setEchoMode(QtWidgets.QLineEdit.EchoMode.NoEcho)
+        else:
+            self.lineEdit1.setEchoMode(QtWidgets.QLineEdit.EchoMode.Normal)
 
 
 if __name__ == "__main__":
