@@ -63,6 +63,7 @@ class window(QWidget):
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
+        Form.setWindowIcon(QtGui.QIcon('Audio.ico'))
         Form.setWindowTitle(_translate("Form", "Mp3 Player"))
         self.btnAddFile.setText(_translate("Form", "Add New Music File"))
         self.btnRemove.setText(_translate("Form", "Remove Selected File"))
