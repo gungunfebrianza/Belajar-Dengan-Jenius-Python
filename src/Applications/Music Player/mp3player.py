@@ -25,6 +25,7 @@ class window(QWidget):
         self.btnPrev = QtWidgets.QPushButton(windowQWidget)
         self.labelPlayed = QtWidgets.QLabel(windowQWidget)
         self.openFileDialog1 = QFileDialog(windowQWidget)
+        self.paused = False
 
     def setupUi(self, Form):
         Form.setObjectName("Form")
@@ -71,6 +72,7 @@ class window(QWidget):
         self.btnAddFile.clicked.connect(self.openFileNamesDialog)
         self.btnPlay.clicked.connect(self.play_music)
         self.btnStop.clicked.connect(self.stop_music)
+        self.btnPause.clicked.connect(self.pause_music)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
@@ -100,6 +102,16 @@ class window(QWidget):
 
     def stop_music(self):
         pygame.mixer.music.stop()
+
+    def pause_music(self):
+
+        if self.paused:
+            pygame.mixer.music.unpause()
+            self.paused = False
+        else:
+            pygame.mixer.music.pause()
+            self.paused = True
+
 
 
 if __name__ == "__main__":
