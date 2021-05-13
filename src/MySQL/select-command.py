@@ -40,3 +40,9 @@ my_cursor.execute("SELECT * FROM users LIMIT 3 OFFSET 1")
 result = my_cursor.fetchall()
 for row in result:
     print(row)
+
+# ORDERING RESULTS
+my_cursor.execute("SELECT * FROM users ORDER BY age DESC")
+result = my_cursor.fetchall()
+for row in result:
+    print(row)
