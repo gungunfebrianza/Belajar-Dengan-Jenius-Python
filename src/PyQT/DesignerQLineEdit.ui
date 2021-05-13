@@ -33,6 +33,58 @@
     </rect>
    </property>
   </widget>
+  <widget class="QLabel" name="labelCursorPosition">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>341</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cursor Position</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelSelectionStart">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>340</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Selection Start At</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelSelectedLen">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>340</y>
+     <width>101</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Selected Length</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelSelectionEnd">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>340</y>
+     <width>111</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Selection End At</string>
+   </property>
+  </widget>
   <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
@@ -280,46 +332,6 @@
     </item>
     <item>
      <widget class="QLineEdit" name="lineEditSetCursor"/>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>340</y>
-     <width>361</width>
-     <height>18</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_2">
-    <item>
-     <widget class="QLabel" name="labelCursorPosition">
-      <property name="text">
-       <string>Cursor Position</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="labelSelectionStart">
-      <property name="text">
-       <string>Selection Start At</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="labelSelectedLen">
-      <property name="text">
-       <string>Selected Length</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="labelSelectionEnd">
-      <property name="text">
-       <string>Selection End At</string>
-      </property>
-     </widget>
     </item>
    </layout>
   </widget>

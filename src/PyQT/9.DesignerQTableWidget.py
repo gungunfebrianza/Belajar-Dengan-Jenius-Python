@@ -110,15 +110,15 @@ class window(QWidget):  # TEST
         item = self.tableWidget1.item(0, 1)
         item.setText(_translate("Form", "febrianza@gmail.com"))
         item = self.tableWidget1.item(0, 2)
-        item.setText(_translate("Form", "***************"))
+        item.setText(_translate("Form", "abra-cadrabra"))
         item = self.tableWidget1.item(0, 3)
         item.setText(_translate("Form", "For API Development Purpose"))
 
         self.tableWidget1.setSortingEnabled(__sortingEnabled)
         self.pushButton1.setText(_translate("Form", "Add Password"))
-        self.tableWidget1.itemChanged.connect(self.event_item_changed)
-        self.tableWidget1.itemClicked.connect(self.event_item_clicked)
-        self.pushButton1.clicked.connect(self.event_set_item)
+        # self.tableWidget1.itemChanged.connect(self.event_item_changed)
+        # self.tableWidget1.itemClicked.connect(self.event_item_clicked)
+        self.pushButton1.clicked.connect(self.get_item)
 
     # Todo : Add UI to Insert New Row At Specific Index
     def event_add_row(self):
