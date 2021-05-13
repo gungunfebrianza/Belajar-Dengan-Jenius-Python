@@ -188,7 +188,7 @@ class window(QWidget):
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
-        self.pushButtonSelectAll.clicked.connect(self.read_cursor_position)
+        self.pushButtonSelectAll.clicked.connect(self.select_all())
         self.lineEdit1.cursorPositionChanged.connect(self.read_cursor_position)
 
     def retranslateUi(self, Form):
@@ -234,6 +234,7 @@ class window(QWidget):
         if self.lineEdit1.hasSelectedText():
             self.labelSelectionStart.setText("Selection Start At : " + str(self.lineEdit1.selectionStart()))
             self.labelSelectedLen.setText("Selection Length : " + str(self.lineEdit1.selectionLength()))
+            self.labelSelectionEnd.setText("Selection End At : " + str(self.lineEdit1.selectionEnd()))
 
 
 if __name__ == "__main__":
