@@ -48,12 +48,11 @@ class window(QWidget):
         self.comboBox3 = QtWidgets.QComboBox(self.widget4)
         self.pushButtonSetCursor = QtWidgets.QPushButton(self.widget4)
         self.lineEditSetCursor = QtWidgets.QLineEdit(self.widget4)
-        self.widget5 = QtWidgets.QWidget(windowQWidget)
-        self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.widget5)
-        self.labelCursorPosition = QtWidgets.QLabel(self.widget5)
-        self.labelSelectionStart = QtWidgets.QLabel(self.widget5)
-        self.labelSelectedLen = QtWidgets.QLabel(self.widget5)
-        self.labelSelectionEnd = QtWidgets.QLabel(self.widget5)
+
+        self.labelCursorPosition = QtWidgets.QLabel(windowQWidget)
+        self.labelSelectionStart = QtWidgets.QLabel(windowQWidget)
+        self.labelSelectedLen = QtWidgets.QLabel(windowQWidget)
+        self.labelSelectionEnd = QtWidgets.QLabel(windowQWidget)
 
     def setupUi(self, Form):
         Form.setObjectName("Form")
@@ -174,28 +173,23 @@ class window(QWidget):
         self.lineEditSetCursor.setObjectName("lineEditSetCursor")
         self.horizontalLayout_6.addWidget(self.lineEditSetCursor)
 
-        self.widget5.setGeometry(QtCore.QRect(10, 340, 361, 18))
-        self.widget5.setObjectName("widget5")
-
-        self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-
         self.labelCursorPosition.setObjectName("labelCursorPosition")
-        self.horizontalLayout_2.addWidget(self.labelCursorPosition)
+        self.labelCursorPosition.setGeometry(QtCore.QRect(11, 341, 121, 16))
 
         self.labelSelectionStart.setObjectName("labelSelectionStart")
-        self.horizontalLayout_2.addWidget(self.labelSelectionStart)
+        self.labelSelectionStart.setGeometry(QtCore.QRect(180, 340, 121, 16))
 
         self.labelSelectedLen.setObjectName("labelSelectedLen")
-        self.horizontalLayout_2.addWidget(self.labelSelectedLen)
+        self.labelSelectedLen.setGeometry(QtCore.QRect(330, 340, 101, 16))
 
         self.labelSelectionEnd.setObjectName("labelSelectionEnd")
-        self.horizontalLayout_2.addWidget(self.labelSelectionEnd)
+        self.labelSelectionEnd.setGeometry(QtCore.QRect(460, 340, 111, 16))
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
-        self.pushButtonSelectAll.clicked.connect(self.select_all)
+        self.pushButtonSelectAll.clicked.connect(self.read_cursor_position)
+        self.lineEdit1.cursorPositionChanged.connect(self.read_cursor_position)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
@@ -234,6 +228,12 @@ class window(QWidget):
 
     def select_all(self):
         self.lineEdit1.selectAll()
+
+    def read_cursor_position(self):
+        self.labelCursorPosition.setText("Cursor Position : " + str(self.lineEdit1.cursorPosition()))
+        if self.lineEdit1.hasSelectedText():
+            self.labelSelectionStart.setText("Selection Start At : " + str(self.lineEdit1.selectionStart()))
+
 
 
 if __name__ == "__main__":
