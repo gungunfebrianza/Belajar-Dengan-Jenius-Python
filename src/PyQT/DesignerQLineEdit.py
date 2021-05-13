@@ -7,143 +7,188 @@
 
 
 from PyQt6 import QtCore, QtGui, QtWidgets
+from PyQt6.QtWidgets import QWidget
 
 
-class Ui_Form(object):
+class window(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.lineEdit1 = QtWidgets.QLineEdit(windowQWidget)
+        self.lineEdit2 = QtWidgets.QLineEdit(windowQWidget)
+        self.widget = QtWidgets.QWidget(windowQWidget)
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.widget)
+        self.pushButtonSelectAll = QtWidgets.QPushButton(self.widget)
+        self.pushButtonCopy = QtWidgets.QPushButton(self.widget)
+        self.pushButtonUndo = QtWidgets.QPushButton(self.widget)
+        self.pushButtonCut = QtWidgets.QPushButton(self.widget)
+        self.pushButtonPaste = QtWidgets.QPushButton(self.widget)
+        self.pushButtonRedo = QtWidgets.QPushButton(self.widget)
+        self.pushButtonDeselect = QtWidgets.QPushButton(self.widget)
+        self.widget1 = QtWidgets.QWidget(windowQWidget)
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.widget1)
+        self.pushButtonSetText = QtWidgets.QPushButton(self.widget1)
+        self.pushButtonRead = QtWidgets.QPushButton(self.widget1)
+        self.pushButtonReadPlaceHolder = QtWidgets.QPushButton(self.widget1)
+        self.pushButtonReadSelectedText = QtWidgets.QPushButton(self.widget1)
+        self.widget2 = QtWidgets.QWidget(windowQWidget)
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.widget2)
+        self.pushButtonSetMaxLen = QtWidgets.QPushButton(self.widget2)
+        self.lineEditMaxLen = QtWidgets.QLineEdit(self.widget2)
+        self.pushButtonSetInputMask = QtWidgets.QPushButton(self.widget2)
+        self.lineEditInputMask = QtWidgets.QLineEdit(self.widget2)
+        self.widget3 = QtWidgets.QWidget(windowQWidget)
+        self.horizontalLayout_5 = QtWidgets.QHBoxLayout(self.widget3)
+        self.pushButtonSetAlign = QtWidgets.QPushButton(self.widget3)
+        self.comboBox1 = QtWidgets.QComboBox(self.widget3)
+        self.pushButtonSetEcho = QtWidgets.QPushButton(self.widget3)
+        self.comboBox2 = QtWidgets.QComboBox(self.widget3)
+        self.widget4 = QtWidgets.QWidget(windowQWidget)
+        self.horizontalLayout_6 = QtWidgets.QHBoxLayout(self.widget4)
+        self.pushButtonSetReadOnly = QtWidgets.QPushButton(self.widget4)
+        self.comboBox3 = QtWidgets.QComboBox(self.widget4)
+        self.pushButtonSetCursor = QtWidgets.QPushButton(self.widget4)
+        self.lineEditSetCursor = QtWidgets.QLineEdit(self.widget4)
+        self.widget5 = QtWidgets.QWidget(windowQWidget)
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.widget5)
+        self.labelCursorPosition = QtWidgets.QLabel(self.widget5)
+        self.labelSelectionStart = QtWidgets.QLabel(self.widget5)
+        self.labelSelectedLen = QtWidgets.QLabel(self.widget5)
+        self.labelSelectionEnd = QtWidgets.QLabel(self.widget5)
+
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(661, 369)
-        self.lineEdit1 = QtWidgets.QLineEdit(Form)
+
         self.lineEdit1.setGeometry(QtCore.QRect(10, 10, 641, 121))
         self.lineEdit1.setObjectName("lineEdit1")
-        self.lineEdit2 = QtWidgets.QLineEdit(Form)
+
         self.lineEdit2.setGeometry(QtCore.QRect(10, 170, 641, 41))
         self.lineEdit2.setObjectName("lineEdit2")
-        self.widget = QtWidgets.QWidget(Form)
+
         self.widget.setGeometry(QtCore.QRect(11, 140, 563, 26))
         self.widget.setObjectName("widget")
-        self.horizontalLayout = QtWidgets.QHBoxLayout(self.widget)
+
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.pushButtonSelectAll = QtWidgets.QPushButton(self.widget)
+
         self.pushButtonSelectAll.setObjectName("pushButtonSelectAll")
         self.horizontalLayout.addWidget(self.pushButtonSelectAll)
-        self.pushButtonCopy = QtWidgets.QPushButton(self.widget)
+
         self.pushButtonCopy.setObjectName("pushButtonCopy")
         self.horizontalLayout.addWidget(self.pushButtonCopy)
-        self.pushButtonCut = QtWidgets.QPushButton(self.widget)
+
         self.pushButtonCut.setObjectName("pushButtonCut")
         self.horizontalLayout.addWidget(self.pushButtonCut)
-        self.pushButtonPaste = QtWidgets.QPushButton(self.widget)
+
         self.pushButtonPaste.setObjectName("pushButtonPaste")
         self.horizontalLayout.addWidget(self.pushButtonPaste)
-        self.pushButtonUndo = QtWidgets.QPushButton(self.widget)
+
         self.pushButtonUndo.setObjectName("pushButtonUndo")
         self.horizontalLayout.addWidget(self.pushButtonUndo)
-        self.pushButtonRedo = QtWidgets.QPushButton(self.widget)
+
         self.pushButtonRedo.setObjectName("pushButtonRedo")
         self.horizontalLayout.addWidget(self.pushButtonRedo)
-        self.pushButtonDeselect = QtWidgets.QPushButton(self.widget)
+
         self.pushButtonDeselect.setObjectName("pushButtonDeselect")
         self.horizontalLayout.addWidget(self.pushButtonDeselect)
-        self.widget1 = QtWidgets.QWidget(Form)
+
         self.widget1.setGeometry(QtCore.QRect(10, 220, 445, 26))
         self.widget1.setObjectName("widget1")
-        self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.widget1)
+
         self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
-        self.pushButtonSetText = QtWidgets.QPushButton(self.widget1)
+
         self.pushButtonSetText.setObjectName("pushButtonSetText")
         self.horizontalLayout_3.addWidget(self.pushButtonSetText)
-        self.pushButtonRead = QtWidgets.QPushButton(self.widget1)
+
         self.pushButtonRead.setObjectName("pushButtonRead")
         self.horizontalLayout_3.addWidget(self.pushButtonRead)
-        self.pushButtonReadPlaceHolder = QtWidgets.QPushButton(self.widget1)
+
         self.pushButtonReadPlaceHolder.setObjectName("pushButtonReadPlaceHolder")
         self.horizontalLayout_3.addWidget(self.pushButtonReadPlaceHolder)
-        self.pushButtonReadSelectedText = QtWidgets.QPushButton(self.widget1)
+
         self.pushButtonReadSelectedText.setObjectName("pushButtonReadSelectedText")
         self.horizontalLayout_3.addWidget(self.pushButtonReadSelectedText)
-        self.widget2 = QtWidgets.QWidget(Form)
+
         self.widget2.setGeometry(QtCore.QRect(10, 250, 608, 26))
         self.widget2.setObjectName("widget2")
-        self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.widget2)
+
         self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
-        self.pushButtonSetMaxLen = QtWidgets.QPushButton(self.widget2)
+
         self.pushButtonSetMaxLen.setObjectName("pushButtonSetMaxLen")
         self.horizontalLayout_4.addWidget(self.pushButtonSetMaxLen)
-        self.lineEditMaxLen = QtWidgets.QLineEdit(self.widget2)
+
         self.lineEditMaxLen.setObjectName("lineEditMaxLen")
         self.horizontalLayout_4.addWidget(self.lineEditMaxLen)
-        self.pushButtonSetInputMask = QtWidgets.QPushButton(self.widget2)
+
         self.pushButtonSetInputMask.setObjectName("pushButtonSetInputMask")
         self.horizontalLayout_4.addWidget(self.pushButtonSetInputMask)
-        self.lineEditInputMask = QtWidgets.QLineEdit(self.widget2)
+
         self.lineEditInputMask.setObjectName("lineEditInputMask")
         self.horizontalLayout_4.addWidget(self.lineEditInputMask)
-        self.widget3 = QtWidgets.QWidget(Form)
+
         self.widget3.setGeometry(QtCore.QRect(10, 280, 486, 26))
         self.widget3.setObjectName("widget3")
-        self.horizontalLayout_5 = QtWidgets.QHBoxLayout(self.widget3)
+
         self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_5.setObjectName("horizontalLayout_5")
-        self.pushButtonSetAlign = QtWidgets.QPushButton(self.widget3)
+
         self.pushButtonSetAlign.setObjectName("pushButtonSetAlign")
         self.horizontalLayout_5.addWidget(self.pushButtonSetAlign)
-        self.comboBox1 = QtWidgets.QComboBox(self.widget3)
+
         self.comboBox1.setObjectName("comboBox1")
         self.comboBox1.addItem("")
         self.comboBox1.addItem("")
         self.comboBox1.addItem("")
         self.comboBox1.addItem("")
         self.horizontalLayout_5.addWidget(self.comboBox1)
-        self.pushButtonSetEcho = QtWidgets.QPushButton(self.widget3)
+
         self.pushButtonSetEcho.setObjectName("pushButtonSetEcho")
         self.horizontalLayout_5.addWidget(self.pushButtonSetEcho)
-        self.comboBox2 = QtWidgets.QComboBox(self.widget3)
+
         self.comboBox2.setObjectName("comboBox2")
         self.comboBox2.addItem("")
         self.comboBox2.addItem("")
         self.comboBox2.addItem("")
         self.comboBox2.addItem("")
         self.horizontalLayout_5.addWidget(self.comboBox2)
-        self.widget4 = QtWidgets.QWidget(Form)
+
         self.widget4.setGeometry(QtCore.QRect(10, 310, 464, 26))
         self.widget4.setObjectName("widget4")
-        self.horizontalLayout_6 = QtWidgets.QHBoxLayout(self.widget4)
+
         self.horizontalLayout_6.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_6.setObjectName("horizontalLayout_6")
-        self.pushButtonSetReadOnly = QtWidgets.QPushButton(self.widget4)
+
         self.pushButtonSetReadOnly.setObjectName("pushButtonSetReadOnly")
         self.horizontalLayout_6.addWidget(self.pushButtonSetReadOnly)
-        self.comboBox3 = QtWidgets.QComboBox(self.widget4)
+
         self.comboBox3.setObjectName("comboBox3")
         self.comboBox3.addItem("")
         self.comboBox3.addItem("")
         self.horizontalLayout_6.addWidget(self.comboBox3)
-        self.pushButtonSetCursor = QtWidgets.QPushButton(self.widget4)
+
         self.pushButtonSetCursor.setObjectName("pushButtonSetCursor")
         self.horizontalLayout_6.addWidget(self.pushButtonSetCursor)
-        self.lineEditSetCursor = QtWidgets.QLineEdit(self.widget4)
+
         self.lineEditSetCursor.setObjectName("lineEditSetCursor")
         self.horizontalLayout_6.addWidget(self.lineEditSetCursor)
-        self.widget5 = QtWidgets.QWidget(Form)
+
         self.widget5.setGeometry(QtCore.QRect(10, 340, 361, 18))
         self.widget5.setObjectName("widget5")
-        self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.widget5)
+
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.labelCursorPosition = QtWidgets.QLabel(self.widget5)
+
         self.labelCursorPosition.setObjectName("labelCursorPosition")
         self.horizontalLayout_2.addWidget(self.labelCursorPosition)
-        self.labelSelectionStart = QtWidgets.QLabel(self.widget5)
+
         self.labelSelectionStart.setObjectName("labelSelectionStart")
         self.horizontalLayout_2.addWidget(self.labelSelectionStart)
-        self.labelSelectedLen = QtWidgets.QLabel(self.widget5)
+
         self.labelSelectedLen.setObjectName("labelSelectedLen")
         self.horizontalLayout_2.addWidget(self.labelSelectedLen)
-        self.labelSelectionEnd = QtWidgets.QLabel(self.widget5)
+
         self.labelSelectionEnd.setObjectName("labelSelectionEnd")
         self.horizontalLayout_2.addWidget(self.labelSelectionEnd)
 
@@ -184,3 +229,13 @@ class Ui_Form(object):
         self.labelSelectionStart.setText(_translate("Form", "Selection Start At"))
         self.labelSelectedLen.setText(_translate("Form", "Selected Length"))
         self.labelSelectionEnd.setText(_translate("Form", "Selection End At"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication([])
+    windowQWidget = QWidget()
+    gui = window()
+    gui.setupUi(windowQWidget)
+    windowQWidget.show()
+    sys.exit(app.exec())
