@@ -75,6 +75,7 @@ class window(QWidget):
         self.btnPause.clicked.connect(self.pause_music)
         self.btnNext.clicked.connect(self.next_music)
         self.btnPrev.clicked.connect(self.prev_music)
+        self.btnRemove.clicked.connect(self.remove_music)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
@@ -124,6 +125,9 @@ class window(QWidget):
         item = self.listWidget.item(current_row-1)
         self.listWidget.setCurrentItem(item)
 
+    def remove_music(self):
+        item = self.listWidget.currentRow()
+        self.listWidget.takeItem(item)
 
 if __name__ == "__main__":
     import sys
