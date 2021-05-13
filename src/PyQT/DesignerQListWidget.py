@@ -75,6 +75,7 @@ class window(QWidget):
         self.pushButton3.clicked.connect(self.remove_item)
         self.pushButton4.clicked.connect(self.clear_list)
         self.pushButton6.clicked.connect(self.sort_asc)
+        self.pushButton7.clicked.connect(self.find_item)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
@@ -116,6 +117,20 @@ class window(QWidget):
 
     def sort_asc(self):
         self.listWidget1.sortItems(Qt.SortOrder.AscendingOrder)
+
+    def find_item(self):
+        item = self.listWidget1.item(20)
+        self.listWidget1.scrollToItem(item)
+        print(item.isSelected())
+        item.setSelected(True)
+        print(item.isSelected())
+
+    def scroll_to_item(self):
+        item = self.listWidget1.item(20)
+        self.listWidget1.scrollToItem(item)
+        print(item.isSelected())
+        item.setSelected(True)
+        print(item.isSelected())
 
 
 if __name__ == "__main__":
