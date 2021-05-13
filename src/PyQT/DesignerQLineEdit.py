@@ -192,6 +192,7 @@ class window(QWidget):
         self.pushButtonCopy.clicked.connect(self.copy_text)
         self.pushButtonCut.clicked.connect(self.cut_text)
         self.pushButtonPaste.clicked.connect(self.paste_text)
+        self.pushButtonUndo.clicked.connect(self.undo_command)
         self.lineEdit1.cursorPositionChanged.connect(self.read_cursor_position)
 
     def retranslateUi(self, Form):
@@ -240,6 +241,9 @@ class window(QWidget):
 
     def paste_text(self):
         self.lineEdit1.paste()
+
+    def undo_command(self):
+        self.lineEdit1.undo()
 
     def read_cursor_position(self):
         self.labelCursorPosition.setText("Cursor Position : " + str(self.lineEdit1.cursorPosition()))
