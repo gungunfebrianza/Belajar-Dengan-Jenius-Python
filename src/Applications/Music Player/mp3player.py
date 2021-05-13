@@ -48,6 +48,7 @@ class window(QWidget):
 
         self.btnPause.setGeometry(QtCore.QRect(110, 210, 91, 41))
         self.btnPause.setObjectName("btnPause")
+        self.btnPause.setIcon(QtGui.QIcon("Pause.png"))
 
         self.btnStop.setGeometry(QtCore.QRect(210, 210, 91, 41))
         self.btnStop.setObjectName("btnStop")
