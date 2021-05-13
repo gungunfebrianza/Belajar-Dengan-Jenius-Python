@@ -70,6 +70,7 @@ class window(QWidget):
 
         self.pushButton1.clicked.connect(self.add_item)
         self.pushButton2.clicked.connect(self.insert_item)
+        self.listWidget1.itemClicked.connect(self.info_current_item)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
@@ -91,6 +92,10 @@ class window(QWidget):
 
     def insert_item(self):
         self.listWidget1.insertItem(3, "Data in row three")
+
+    def info_current_item(self):
+        item = self.listWidget1.currentItem()
+        self.label2.setText(item.text())
 
 
 if __name__ == "__main__":
