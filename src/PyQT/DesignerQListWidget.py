@@ -7,6 +7,7 @@
 
 
 from PyQt6 import QtCore, QtGui, QtWidgets
+from PyQt6.QtCore import Qt
 from PyQt6.QtWidgets import QWidget
 
 
@@ -72,6 +73,8 @@ class window(QWidget):
         self.pushButton2.clicked.connect(self.edit_item)
         self.listWidget1.itemClicked.connect(self.info_current_item)
         self.pushButton3.clicked.connect(self.remove_item)
+        self.pushButton4.clicked.connect(self.clear_list)
+        self.pushButton6.clicked.connect(self.sort_asc)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
@@ -107,6 +110,12 @@ class window(QWidget):
     def remove_item(self):
         item = self.listWidget1.currentRow()
         self.listWidget1.takeItem(item)
+
+    def clear_list(self):
+        self.listWidget1.clear()
+
+    def sort_asc(self):
+        self.listWidget1.sortItems(Qt.SortOrder.AscendingOrder)
 
 
 if __name__ == "__main__":
