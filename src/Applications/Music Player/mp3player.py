@@ -42,6 +42,7 @@ class window(QWidget):
 
         self.btnPlay.setGeometry(QtCore.QRect(10, 210, 91, 41))
         self.btnPlay.setObjectName("btnPlay")
+        self.btnPlay.setIcon(QtGui.QIcon("Play.png"))
 
         self.btnPause.setGeometry(QtCore.QRect(110, 210, 91, 41))
         self.btnPause.setObjectName("btnPause")
@@ -68,7 +69,7 @@ class window(QWidget):
         self.btnAddFile.setText(_translate("Form", "Add New Music File"))
         self.btnRemove.setText(_translate("Form", "Remove Selected File"))
         self.btnClearList.setText(_translate("Form", "Clear List"))
-        self.btnPlay.setText(_translate("Form", "Play"))
+        self.btnPlay.setText(_translate("Form", ""))
         self.btnPause.setText(_translate("Form", "Pause"))
         self.btnStop.setText(_translate("Form", "Stop"))
         self.btnNext.setText(_translate("Form", "Next"))
