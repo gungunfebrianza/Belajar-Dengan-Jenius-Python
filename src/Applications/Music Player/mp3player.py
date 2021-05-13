@@ -54,11 +54,13 @@ class window(QWidget):
         self.btnStop.setObjectName("btnStop")
         self.btnStop.setIcon(QtGui.QIcon("Stop.png"))
 
-        self.btnNext.setGeometry(QtCore.QRect(310, 210, 91, 41))
+        self.btnNext.setGeometry(QtCore.QRect(410, 210, 91, 41))
         self.btnNext.setObjectName("btnNext")
+        self.btnNext.setIcon(QtGui.QIcon("Next.png"))
 
-        self.btnPrev.setGeometry(QtCore.QRect(410, 210, 91, 41))
+        self.btnPrev.setGeometry(QtCore.QRect(310, 210, 91, 41))
         self.btnPrev.setObjectName("btnPrev")
+        self.btnPrev.setIcon(QtGui.QIcon("Previous.png"))
 
         self.labelPlayed.setGeometry(QtCore.QRect(10, 270, 331, 16))
         self.labelPlayed.setObjectName("labelPlayed")
@@ -68,6 +70,7 @@ class window(QWidget):
 
         self.btnAddFile.clicked.connect(self.openFileNamesDialog)
         self.btnPlay.clicked.connect(self.play_music)
+        self.btnStop.clicked.connect(self.stop_music)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
@@ -77,10 +80,10 @@ class window(QWidget):
         self.btnRemove.setText(_translate("Form", "Remove Selected File"))
         self.btnClearList.setText(_translate("Form", "Clear List"))
         self.btnPlay.setText(_translate("Form", ""))
-        self.btnPause.setText(_translate("Form", "Pause"))
+        self.btnPause.setText(_translate("Form", ""))
         self.btnStop.setText(_translate("Form", ""))
-        self.btnNext.setText(_translate("Form", "Next"))
-        self.btnPrev.setText(_translate("Form", "Prev"))
+        self.btnNext.setText(_translate("Form", ""))
+        self.btnPrev.setText(_translate("Form", ""))
         self.labelPlayed.setText(_translate("Form", "Music Played : "))
 
     def openFileNamesDialog(self):
@@ -88,13 +91,15 @@ class window(QWidget):
         for music in results[0]:
             self.listWidget.addItem(music)
 
-
     def play_music(self):
         pygame.mixer.music.load(
             f'{self.listWidget.currentItem().text()}')
         pygame.mixer.music.play(loops=0)
         base = os.path.basename(self.listWidget.currentItem().text())
         self.labelPlayed.setText("Played Music : " + os.path.splitext(base)[0])
+
+    def stop_music(self):
+        pygame.mixer.music.stop()
 
 
 if __name__ == "__main__":
