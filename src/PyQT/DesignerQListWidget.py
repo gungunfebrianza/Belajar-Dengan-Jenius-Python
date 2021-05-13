@@ -35,42 +35,34 @@ class window(QWidget):
 
         self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.listWidget1.setObjectName("listWidget1")
-        self.verticalLayout_2.addWidget(self.listWidget1)
-        self.label1.setObjectName("label1")
-        self.verticalLayout_2.addWidget(self.label1)
-        self.label2.setObjectName("label2")
-        self.verticalLayout_2.addWidget(self.label2)
-        self.verticalLayout_3.addLayout(self.verticalLayout_2)
-
         self.verticalLayout.setObjectName("verticalLayout")
-
+        self.listWidget1.setObjectName("listWidget1")
+        self.label1.setObjectName("label1")
+        self.label2.setObjectName("label2")
         self.pushButton1.setObjectName("pushButton1")
-        self.verticalLayout.addWidget(self.pushButton1)
-
         self.lineEdit1.setObjectName("lineEdit1")
-        self.verticalLayout.addWidget(self.lineEdit1)
-
         self.pushButton2.setObjectName("pushButton2")
-        self.verticalLayout.addWidget(self.pushButton2)
-
         self.lineEdit2.setObjectName("lineEdit2")
-        self.verticalLayout.addWidget(self.lineEdit2)
-
         self.pushButton3.setObjectName("pushButton3")
-        self.verticalLayout.addWidget(self.pushButton3)
-
         self.pushButton4.setObjectName("pushButton4")
-        self.verticalLayout.addWidget(self.pushButton4)
-
         self.pushButton6.setObjectName("pushButton6")
-        self.verticalLayout.addWidget(self.pushButton6)
-
         self.pushButton7.setObjectName("pushButton7")
-        self.verticalLayout.addWidget(self.pushButton7)
-
         self.lineEdit3.setObjectName("lineEdit3")
+
+        self.verticalLayout_2.addWidget(self.listWidget1)
+        self.verticalLayout_2.addWidget(self.label1)
+        self.verticalLayout_2.addWidget(self.label2)
+        self.verticalLayout.addWidget(self.pushButton1)
+        self.verticalLayout.addWidget(self.lineEdit1)
+        self.verticalLayout.addWidget(self.pushButton2)
+        self.verticalLayout.addWidget(self.lineEdit2)
+        self.verticalLayout.addWidget(self.pushButton3)
+        self.verticalLayout.addWidget(self.pushButton4)
+        self.verticalLayout.addWidget(self.pushButton6)
+        self.verticalLayout.addWidget(self.pushButton7)
         self.verticalLayout.addWidget(self.lineEdit3)
+
+        self.verticalLayout_3.addLayout(self.verticalLayout_2)
         self.verticalLayout_3.addLayout(self.verticalLayout)
 
         self.retranslateUi(Form)
