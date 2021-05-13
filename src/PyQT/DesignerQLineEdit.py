@@ -8,7 +8,7 @@
 
 from PyQt6 import QtCore, QtGui, QtWidgets
 from PyQt6.QtWidgets import QWidget
-from PyQt6.QtGui import QIntValidator
+from PyQt6.QtGui import QIntValidator, QFont
 
 
 class window(QWidget):
@@ -201,7 +201,7 @@ class window(QWidget):
         self.pushButtonSetText.clicked.connect(self.change_line_edit1)
         self.pushButtonRead.clicked.connect(self.read_line_edit1)
         self.pushButtonReadPlaceHolder.clicked.connect(self.read_placeholder)
-        self.pushButtonChangeFont.clicked.connect(self.integer_validator)
+        self.pushButtonChangeFont.clicked.connect(self.change_font)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
@@ -287,6 +287,8 @@ class window(QWidget):
     def integer_validator(self):
         self.lineEdit1.setValidator(QIntValidator(0, 10000000))
 
+    def change_font(self):
+        self.lineEdit1.setFont(QFont("Arial",20))
 
 if __name__ == "__main__":
     import sys
