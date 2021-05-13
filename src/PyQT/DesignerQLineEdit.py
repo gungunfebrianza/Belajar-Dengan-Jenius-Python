@@ -9,6 +9,7 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 from PyQt6.QtWidgets import QWidget
 from PyQt6.QtGui import QIntValidator, QFont
+from PyQt6.QtCore import Qt
 
 
 class window(QWidget):
@@ -141,7 +142,6 @@ class window(QWidget):
         self.comboBox1.addItem("")
         self.comboBox1.addItem("")
         self.comboBox1.addItem("")
-        self.comboBox1.addItem("")
         self.horizontalLayout_5.addWidget(self.comboBox1)
 
         self.pushButtonSetEcho.setObjectName("pushButtonSetEcho")
@@ -204,6 +204,7 @@ class window(QWidget):
         self.pushButtonChangeFont.clicked.connect(self.change_font)
         self.pushButtonSetMaxLen.clicked.connect(self.change_max_length)
         self.pushButtonSetInputMask.clicked.connect(self.set_input_mask)
+        self.pushButtonSetAlign.clicked.connect(self.set_align)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
@@ -225,7 +226,6 @@ class window(QWidget):
         self.comboBox1.setItemText(0, _translate("Form", "Center"))
         self.comboBox1.setItemText(1, _translate("Form", "Right"))
         self.comboBox1.setItemText(2, _translate("Form", "Left"))
-        self.comboBox1.setItemText(3, _translate("Form", "Justify"))
         self.pushButtonSetEcho.setText(_translate("Form", "Set Echo Mode Line Edit 1"))
         self.comboBox2.setItemText(0, _translate("Form", "Password Mode"))
         self.comboBox2.setItemText(1, _translate("Form", "Password Echo On Edit"))
@@ -297,6 +297,14 @@ class window(QWidget):
 
     def set_input_mask(self):
         self.lineEdit1.setInputMask(self.lineEditInputMask.text())
+
+    def set_align(self):
+        if self.comboBox1.currentText() == "Center":
+            self.lineEdit1.setAlignment(Qt.Alignment.AlignCenter)
+        elif self.comboBox1.currentText() == "Left":
+            self.lineEdit1.setAlignment(Qt.Alignment.AlignLeft)
+        else:
+            self.lineEdit1.setAlignment(Qt.Alignment.AlignRight)
 
 
 if __name__ == "__main__":
