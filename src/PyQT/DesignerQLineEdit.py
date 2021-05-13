@@ -180,10 +180,10 @@ class window(QWidget):
         self.labelSelectionStart.setGeometry(QtCore.QRect(180, 340, 121, 16))
 
         self.labelSelectedLen.setObjectName("labelSelectedLen")
-        self.labelSelectedLen.setGeometry(QtCore.QRect(330, 340, 101, 16))
+        self.labelSelectedLen.setGeometry(QtCore.QRect(330, 340, 118, 16))
 
         self.labelSelectionEnd.setObjectName("labelSelectionEnd")
-        self.labelSelectionEnd.setGeometry(QtCore.QRect(460, 340, 111, 16))
+        self.labelSelectionEnd.setGeometry(QtCore.QRect(460, 340, 118, 16))
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -233,7 +233,7 @@ class window(QWidget):
         self.labelCursorPosition.setText("Cursor Position : " + str(self.lineEdit1.cursorPosition()))
         if self.lineEdit1.hasSelectedText():
             self.labelSelectionStart.setText("Selection Start At : " + str(self.lineEdit1.selectionStart()))
-
+            self.labelSelectedLen.setText("Selection Length : " + str(self.lineEdit1.selectionLength()))
 
 
 if __name__ == "__main__":
