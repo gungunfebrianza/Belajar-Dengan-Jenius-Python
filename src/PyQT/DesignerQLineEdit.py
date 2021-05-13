@@ -207,6 +207,7 @@ class window(QWidget):
         self.pushButtonSetAlign.clicked.connect(self.set_align)
         self.pushButtonSetEcho.clicked.connect(self.echo_mode)
         self.pushButtonSetReadOnly.clicked.connect(self.set_read_only)
+        self.pushButtonSetCursor.clicked.connect(self.set_cursor_position)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
@@ -324,6 +325,9 @@ class window(QWidget):
         else:
             self.lineEdit1.setReadOnly(False)
 
+    def set_cursor_position(self):
+        self.lineEdit1.setFocus()
+        self.lineEdit1.setCursorPosition(int(self.lineEditSetCursor.text()))
 
 
 if __name__ == "__main__":
