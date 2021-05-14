@@ -80,11 +80,16 @@ class window(QWidget):
             result = my_cursor.fetchall()
             self.tableWidget1.setRowCount(len(result))
             self.tableWidget1.setColumnCount(len(result[0]))
+
             for row_number, row_data in enumerate(result):
                 self.tableWidget1.insertRow(row_number)
 
                 for column_number, data in enumerate(row_data):
                     self.tableWidget1.setItem(row_number, column_number, QTableWidgetItem(str(data)))
+            self.tableWidget1.setHorizontalHeaderItem(0, QTableWidgetItem("Name"))
+            self.tableWidget1.setHorizontalHeaderItem(1, QTableWidgetItem("Email"))
+            self.tableWidget1.setHorizontalHeaderItem(2, QTableWidgetItem("Age"))
+            self.tableWidget1.setHorizontalHeaderItem(3, QTableWidgetItem("User ID"))
 
         except mc.Error as e:
             print("Error")

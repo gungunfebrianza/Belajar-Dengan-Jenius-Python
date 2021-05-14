@@ -31,6 +31,7 @@ class window(QWidget):  # TEST
 
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget1.setVerticalHeaderItem(0, item)
+
         item = QtWidgets.QTableWidgetItem()
         font = QtGui.QFont()
         font.setPointSize(12)
