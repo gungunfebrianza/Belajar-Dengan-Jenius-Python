@@ -2,6 +2,7 @@ import json
 import datetime
 import os
 import okex.Account_api as Account
+import okex.Market_api as Market
 
 
 def get_timestamp():
@@ -20,6 +21,6 @@ if __name__ == '__main__':
     flag = '1'  # 模拟盘 demo trading
     # flag = '0'  # 实盘 real trading
 
-accountAPI = Account.AccountAPI(api_key, secret_key, passphrase, False, flag)
-result = accountAPI.get_account('UNI')
+marketAPI = Market.MarketAPI(api_key, secret_key, passphrase, False, flag)
+result = marketAPI.get_tickers('SPOT')
 print(result)

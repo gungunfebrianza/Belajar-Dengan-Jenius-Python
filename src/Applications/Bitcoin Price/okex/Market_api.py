@@ -1,5 +1,5 @@
-from client import Client
-from consts import *
+from .client import Client
+from .consts import *
 
 
 class MarketAPI(Client):
