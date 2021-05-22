@@ -20,7 +20,9 @@ if __name__ == '__main__':
     passphrase = "lamborGhini2019"
     flag = '1'  # 模拟盘 demo trading
     # flag = '0'  # 实盘 real trading
+accountAPI = Account.AccountAPI(api_key, secret_key, passphrase, False, flag)
+result = accountAPI.get_position_risk('SWAP')
 
 marketAPI = Market.MarketAPI(api_key, secret_key, passphrase, False, flag)
-result = marketAPI.get_tickers('SPOT')
+# result = marketAPI.get_tickers('SPOT')
 print(result)
